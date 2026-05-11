@@ -612,6 +612,17 @@ static void enableNativeRedirection() {
  * @param reserved reserved
  * @return JNI version needed by 'ffmpegkit' library
  */
+/* SAF stubs - not available in vanilla FFmpeg 8.1 */
+typedef int (*saf_open_function)(int);
+typedef int (*saf_close_function)(int);
+static saf_open_function saf_open_cb = NULL;
+static saf_close_function saf_close_cb = NULL;
+
+void av_set_saf_open(saf_open_function fn) { saf_open_cb = fn; }
+void av_set_saf_close(saf_close_function fn) { saf_close_cb = fn; }
+saf_open_function av_get_saf_open(void) { return saf_open_cb; }
+saf_close_function av_get_saf_close(void) { return saf_close_cb; }
+
 jint JNI_OnLoad(JavaVM *vm, void *reserved) {
     JNIEnv *env;
     if ((*vm)->GetEnv(vm, (void**)(&env), JNI_VERSION_1_6) != JNI_OK) {

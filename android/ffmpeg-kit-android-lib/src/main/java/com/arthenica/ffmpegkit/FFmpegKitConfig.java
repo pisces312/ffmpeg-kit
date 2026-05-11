@@ -29,7 +29,6 @@ import android.os.ParcelFileDescriptor;
 import android.provider.DocumentsContract;
 import android.util.SparseArray;
 
-import com.arthenica.smartexception.java.Exceptions;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -130,8 +129,6 @@ public class FFmpegKitConfig {
     private static LogRedirectionStrategy globalLogRedirectionStrategy;
 
     static {
-
-        Exceptions.registerRootPackage("com.arthenica");
 
         android.util.Log.i(FFmpegKitConfig.TAG, "Loading ffmpeg-kit.");
 
@@ -241,7 +238,7 @@ public class FFmpegKitConfig {
                     // NOTIFY SESSION CALLBACK DEFINED
                     session.getLogCallback().apply(log);
                 } catch (final Exception e) {
-                    android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside session log callback.%s", Exceptions.getStackTraceString(e)));
+                    android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside session log callback.%s", android.util.Log.getStackTraceString(e)));
                 }
             }
         }
@@ -254,7 +251,7 @@ public class FFmpegKitConfig {
                 // NOTIFY GLOBAL CALLBACK DEFINED
                 globalLogCallbackFunction.apply(log);
             } catch (final Exception e) {
-                android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside global log callback.%s", Exceptions.getStackTraceString(e)));
+                android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside global log callback.%s", android.util.Log.getStackTraceString(e)));
             }
         }
 
@@ -347,7 +344,7 @@ public class FFmpegKitConfig {
                     // NOTIFY SESSION CALLBACK IF DEFINED
                     ffmpegSession.getStatisticsCallback().apply(statistics);
                 } catch (final Exception e) {
-                    android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside session statistics callback.%s", Exceptions.getStackTraceString(e)));
+                    android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside session statistics callback.%s", android.util.Log.getStackTraceString(e)));
                 }
             }
         }
@@ -358,7 +355,7 @@ public class FFmpegKitConfig {
                 // NOTIFY GLOBAL CALLBACK IF DEFINED
                 globalStatisticsCallbackFunction.apply(statistics);
             } catch (final Exception e) {
-                android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside global statistics callback.%s", Exceptions.getStackTraceString(e)));
+                android.util.Log.e(FFmpegKitConfig.TAG, String.format("Exception thrown inside global statistics callback.%s", android.util.Log.getStackTraceString(e)));
             }
         }
     }
@@ -472,7 +469,7 @@ public class FFmpegKitConfig {
             }
 
         } catch (final IOException e) {
-            android.util.Log.e(TAG, String.format("Failed to set font directory: %s.%s", Arrays.toString(fontDirectoryList.toArray()), Exceptions.getStackTraceString(e)));
+            android.util.Log.e(TAG, String.format("Failed to set font directory: %s.%s", Arrays.toString(fontDirectoryList.toArray()), android.util.Log.getStackTraceString(e)));
         } finally {
             if (reference.get() != null) {
                 try {
@@ -659,7 +656,7 @@ public class FFmpegKitConfig {
             ffmpegSession.complete(new ReturnCode(returnCode));
         } catch (final Exception e) {
             ffmpegSession.fail(e);
-            android.util.Log.w(FFmpegKitConfig.TAG, String.format("FFmpeg execute failed: %s.%s", FFmpegKitConfig.argumentsToString(ffmpegSession.getArguments()), Exceptions.getStackTraceString(e)));
+            android.util.Log.w(FFmpegKitConfig.TAG, String.format("FFmpeg execute failed: %s.%s", FFmpegKitConfig.argumentsToString(ffmpegSession.getArguments()), android.util.Log.getStackTraceString(e)));
         }
     }
 
@@ -676,7 +673,7 @@ public class FFmpegKitConfig {
             ffprobeSession.complete(new ReturnCode(returnCode));
         } catch (final Exception e) {
             ffprobeSession.fail(e);
-            android.util.Log.w(FFmpegKitConfig.TAG, String.format("FFprobe execute failed: %s.%s", FFmpegKitConfig.argumentsToString(ffprobeSession.getArguments()), Exceptions.getStackTraceString(e)));
+            android.util.Log.w(FFmpegKitConfig.TAG, String.format("FFprobe execute failed: %s.%s", FFmpegKitConfig.argumentsToString(ffprobeSession.getArguments()), android.util.Log.getStackTraceString(e)));
         }
     }
 
@@ -707,7 +704,7 @@ public class FFmpegKitConfig {
             }
         } catch (final Exception e) {
             mediaInformationSession.fail(e);
-            android.util.Log.w(FFmpegKitConfig.TAG, String.format("Get media information execute failed: %s.%s", FFmpegKitConfig.argumentsToString(mediaInformationSession.getArguments()), Exceptions.getStackTraceString(e)));
+            android.util.Log.w(FFmpegKitConfig.TAG, String.format("Get media information execute failed: %s.%s", FFmpegKitConfig.argumentsToString(mediaInformationSession.getArguments()), android.util.Log.getStackTraceString(e)));
         }
     }
 
@@ -949,7 +946,7 @@ public class FFmpegKitConfig {
             // workaround for https://issuetracker.google.com/issues/162440528: ANDROID_CREATE_DOCUMENT generating file names like "transcode.mp3 (2)"
             return new StringTokenizer(rawExtension, " .").nextToken();
         } catch (final Exception e) {
-            android.util.Log.w(TAG, String.format("Failed to extract extension from saf display name: %s.%s", safDisplayName, Exceptions.getStackTraceString(e)));
+            android.util.Log.w(TAG, String.format("Failed to extract extension from saf display name: %s.%s", safDisplayName, android.util.Log.getStackTraceString(e)));
             return "raw";
         }
     }
@@ -977,7 +974,7 @@ public class FFmpegKitConfig {
                 displayName = cursor.getString(cursor.getColumnIndex(DocumentsContract.Document.COLUMN_DISPLAY_NAME));
             }
         } catch (final Throwable t) {
-            android.util.Log.e(TAG, String.format("Failed to get %s column for %s.%s", DocumentsContract.Document.COLUMN_DISPLAY_NAME, uri.toString(), Exceptions.getStackTraceString(t)));
+            android.util.Log.e(TAG, String.format("Failed to get %s column for %s.%s", DocumentsContract.Document.COLUMN_DISPLAY_NAME, uri.toString(), android.util.Log.getStackTraceString(t)));
             throw t;
         }
 
@@ -1034,7 +1031,7 @@ public class FFmpegKitConfig {
                 android.util.Log.e(TAG, String.format("SAF id %d not found.", safId));
             }
         } catch (final Throwable t) {
-            android.util.Log.e(TAG, String.format("Failed to open SAF id: %d.%s", safId, Exceptions.getStackTraceString(t)));
+            android.util.Log.e(TAG, String.format("Failed to open SAF id: %d.%s", safId, android.util.Log.getStackTraceString(t)));
         }
 
         return 0;
@@ -1063,7 +1060,7 @@ public class FFmpegKitConfig {
                 android.util.Log.e(TAG, String.format("SAF fd %d not found.", fileDescriptor));
             }
         } catch (final Throwable t) {
-            android.util.Log.e(TAG, String.format("Failed to close SAF fd: %d.%s", fileDescriptor, Exceptions.getStackTraceString(t)));
+            android.util.Log.e(TAG, String.format("Failed to close SAF fd: %d.%s", fileDescriptor, android.util.Log.getStackTraceString(t)));
         }
 
         return 0;

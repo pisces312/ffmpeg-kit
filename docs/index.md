@@ -1,15 +1,5 @@
 # FFmpegKit
 
-## Notice
-FFmpegKit has been officially retired. There will be no further `ffmpeg-kit` releases. All previously released `ffmpeg-kit` binaries will be removed according to the following schedule. Thank you for your support and interest in this project.
-
-Thank you for your support and contributions over the course of this project.
-
-| FFmpegKit Version |  Available Until   |
-|:-----------------:|:------------------:|
-|   Less than 6.0   | February 1st, 2025 |
-|        6.0        |  April 1st, 2025   |
-
 <img src="https://github.com/arthenica/ffmpeg-kit/raw/main/docs/assets/ffmpeg-kit-icon-v9.png" width="180">
 
 `FFmpegKit` is a collection of tools to use `FFmpeg` in `Android`, `iOS`, `Linux`, `macOS`, `tvOS`, `Flutter` and `React Native` applications.
@@ -124,8 +114,6 @@ the exact version number of `FFmpeg` is obtained using the `git describe --tags`
 
 |    Platforms     |                                  FFmpegKit Version                                  | FFmpeg Version | Release Date |
 |:----------------:|:-----------------------------------------------------------------------------------:|:--------------:|:------------:|
-|     Flutter      |   [6.0.3](https://github.com/arthenica/ffmpeg-kit/releases/tag/flutter.v6.0.3)    |      6.0       | Sep 19, 2023 |
-|   React Native   | [6.0.2](https://github.com/arthenica/ffmpeg-kit/releases/tag/react.native.v6.0.2) |      6.0       | Sep 19, 2023 |
 |     Flutter      |   [6.0.2](https://github.com/arthenica/ffmpeg-kit/releases/tag/flutter.v6.0.2)    |      6.0       | Sep 03, 2023 |
 |   React Native   | [6.0.1](https://github.com/arthenica/ffmpeg-kit/releases/tag/react.native.v6.0.1) |      6.0       | Sep 03, 2023  |
 |     Flutter      |   [6.0.1](https://github.com/arthenica/ffmpeg-kit/releases/tag/flutter.v6.0.1)    |      6.0       | Sep 03, 2023 |

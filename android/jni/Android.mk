@@ -29,6 +29,7 @@ else
 endif
 
 FFMPEG_INCLUDES := $(MY_LOCAL_PATH)/../../prebuilt/$(MY_BUILD_DIR)/ffmpeg/include
+FFMPEG_INCLUDES += $(MY_LOCAL_PATH)/../../prebuilt/$(MY_BUILD_DIR)/ffmpeg/include/compat
 
 MY_ARM_MODE := arm
 MY_ARM_NEON := false
@@ -69,7 +70,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 $(call import-module, cpu-features)
 
-MY_SRC_FILES := ffmpegkit.c ffprobekit.c ffmpegkit_exception.c fftools_cmdutils.c fftools_ffmpeg.c fftools_ffprobe.c fftools_ffmpeg_mux.c fftools_ffmpeg_mux_init.c fftools_ffmpeg_demux.c fftools_ffmpeg_opt.c fftools_opt_common.c fftools_ffmpeg_hw.c fftools_ffmpeg_filter.c fftools_objpool.c fftools_sync_queue.c fftools_thread_queue.c
+MY_SRC_FILES := ffmpegkit.c ffprobekit.c ffmpegkit_exception.c fftools_cmdutils.c fftools_ffmpeg.c fftools_ffprobe.c fftools_ffmpeg_mux.c fftools_ffmpeg_mux_init.c fftools_ffmpeg_demux.c fftools_ffmpeg_opt.c fftools_opt_common.c fftools_ffmpeg_hw.c fftools_ffmpeg_filter.c fftools_ffmpeg_dec.c fftools_ffmpeg_enc.c fftools_ffmpeg_sched.c fftools_sync_queue.c fftools_thread_queue.c fftools_textformat.c fftools_tf_compact.c fftools_tf_default.c fftools_tf_flat.c fftools_tf_ini.c fftools_tf_json.c fftools_tf_mermaid.c fftools_tf_xml.c fftools_tw_avio.c fftools_tw_buffer.c fftools_tw_stdout.c fftools_graphprint.c fftools_resman.c fftools_graph_css.c fftools_graph_html.c
 
 ifeq ($(TARGET_PLATFORM),android-16)
     MY_SRC_FILES += android_lts_support.c
@@ -77,7 +78,7 @@ else ifeq ($(TARGET_PLATFORM),android-17)
     MY_SRC_FILES += android_lts_support.c
 endif
 
-MY_CFLAGS := -Wall -Werror -Wno-unused-parameter -Wno-switch -Wno-sign-compare
+MY_CFLAGS := -Wall -Werror -Wno-unused-parameter -Wno-switch -Wno-sign-compare -Wno-parentheses -Wno-unused-const-variable
 MY_LDLIBS := -llog -lz -landroid
 
 MY_BUILD_GENERIC_FFMPEG_KIT := true
@@ -89,6 +90,7 @@ ifeq ($(MY_ARMV7_NEON), true)
     LOCAL_MODULE := ffmpegkit_armv7a_neon
     LOCAL_SRC_FILES := $(MY_SRC_FILES)
     LOCAL_CFLAGS := $(MY_CFLAGS)
+    LOCAL_C_INCLUDES := $(FFMPEG_INCLUDES)
     LOCAL_LDLIBS := $(MY_LDLIBS)
     LOCAL_SHARED_LIBRARIES := libavcodec_neon libavfilter_neon libswscale_neon libavformat_neon libavutil_neon libswresample_neon libavdevice_neon
     ifeq ($(APP_STL), c++_shared)
@@ -111,6 +113,7 @@ ifeq ($(MY_BUILD_GENERIC_FFMPEG_KIT), true)
     LOCAL_MODULE := ffmpegkit
     LOCAL_SRC_FILES := $(MY_SRC_FILES)
     LOCAL_CFLAGS := $(MY_CFLAGS)
+    LOCAL_C_INCLUDES := $(FFMPEG_INCLUDES)
     LOCAL_LDLIBS := $(MY_LDLIBS)
     LOCAL_SHARED_LIBRARIES := libavfilter libavformat libavcodec libavutil libswresample libavdevice libswscale
     ifeq ($(APP_STL), c++_shared)

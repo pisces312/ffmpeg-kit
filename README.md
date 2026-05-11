@@ -1,30 +1,8 @@
 # FFmpegKit ![GitHub release](https://img.shields.io/badge/release-v6.0-blue.svg) ![Maven Central](https://img.shields.io/maven-central/v/com.arthenica/ffmpeg-kit-min) ![CocoaPods](https://img.shields.io/cocoapods/v/ffmpeg-kit-ios-min) ![pub](https://img.shields.io/pub/v/ffmpeg_kit_flutter.svg) ![npm](https://img.shields.io/npm/v/ffmpeg-kit-react-native.svg)
 
-## Notice
-FFmpegKit has been officially retired. There will be no further `ffmpeg-kit` releases.
-
-See [Saying Goodbye to FFmpegKit @ medium](https://medium.com/@tanersener/saying-goodbye-to-ffmpegkit-33ae939767e1) to learn why we made this decision.
-
-All previously released `ffmpeg-kit` binaries will be removed according to the following schedule.
-
-| FFmpegKit Version |  Available Until   |
-|:-----------------:|:------------------:|
-|   Less than 6.0   | February 1st, 2025 |
-|        6.0        |  April 1st, 2025   |
-
-Thank you for your support and interest in this project.
-
-If you're looking for a replacement, please check out the community-maintained forks available through the package managers below.
-
-|                          Platform                           |
-|:-------------------------------------------------------:|
-| [Android](https://central.sonatype.com/search?q=ffmpeg+kit) |
-| [Flutter](https://pub.dev/packages?q=ffmpeg+kit) |
-| [React Native](https://www.npmjs.com/search?q=ffmpeg%20kit) |
-
 <img src="https://github.com/arthenica/ffmpeg-kit/blob/main/docs/assets/ffmpeg-kit-icon-v9.png" width="240">
 
-`FFmpegKit` is a collection of tools to use `FFmpeg`<sup>1</sup> in `Android`, `iOS`, `Linux`, `macOS`, `tvOS`, `Flutter` and `React Native` applications.
+`FFmpegKit` is a collection of tools to use `FFmpeg` in `Android`, `iOS`, `Linux`, `macOS`, `tvOS`, `Flutter` and `React Native` applications.
 
 It includes scripts to build `FFmpeg` native libraries, a wrapper library to run `FFmpeg`/`FFprobe` commands in
  applications and 8 prebuilt binary packages available at [Github](https://github.com/arthenica/ffmpeg-kit/releases),
@@ -148,10 +126,8 @@ the exact version number of `FFmpeg` is obtained using the `git describe --tags`
 
 |    Platforms     |                                 FFmpegKit Version                                 | FFmpeg Version | Release Date |
 |:----------------:|:---------------------------------------------------------------------------------:|:--------------:|:------------:|
-|     Flutter      |   [6.0.3](https://github.com/arthenica/ffmpeg-kit/releases/tag/flutter.v6.0.3)    |      6.0       | Sep 19, 2023 |
-|   React Native   | [6.0.2](https://github.com/arthenica/ffmpeg-kit/releases/tag/react.native.v6.0.2) |      6.0       | Sep 19, 2023 |
 |     Flutter      |   [6.0.2](https://github.com/arthenica/ffmpeg-kit/releases/tag/flutter.v6.0.2)    |      6.0       | Sep 03, 2023 |
-|   React Native   | [6.0.1](https://github.com/arthenica/ffmpeg-kit/releases/tag/react.native.v6.0.1) |      6.0       | Sep 03, 2023 |
+|   React Native   | [6.0.1](https://github.com/arthenica/ffmpeg-kit/releases/tag/react.native.v6.0.1) |      6.0       | Sep 03, 2023  |
 |     Flutter      |   [6.0.1](https://github.com/arthenica/ffmpeg-kit/releases/tag/flutter.v6.0.1)    |      6.0       | Sep 03, 2023 |
 |   React Native   | [6.0.0](https://github.com/arthenica/ffmpeg-kit/releases/tag/react.native.v6.0.0) |      6.0       | Aug 27, 2023 |
 |     Flutter      |   [6.0.0](https://github.com/arthenica/ffmpeg-kit/releases/tag/flutter.v6.0.0)    |      6.0       | Aug 27, 2023 |
@@ -241,15 +217,11 @@ that you seek legal advice first. See [FFmpeg Patent Mini-FAQ](https://ffmpeg.or
 distribute that library, then you are subject to pay MPEG LA licensing fees. Refer to
 [OpenH264 FAQ](https://www.openh264.org/faq.html) page for the details.
 
-### 16. Trademarks
-
-<sup>1</sup> `FFmpeg` is a trademark of [Fabrice Bellard](http://www.bellard.org/). `FFmpegKit` is an independent project and not affiliated with the `FFmpeg` trademark holder.
-
-### 17. Contributing
+### 16. Contributing
 
 See our [CONTRIBUTING](CONTRIBUTING.md) guide.
 
-### 18. See Also
+### 17. See Also
 
 - [FFmpeg API Documentation](https://ffmpeg.org/doxygen/4.0/index.html)
 - [FFmpeg Wiki](https://trac.ffmpeg.org/wiki/WikiStart)

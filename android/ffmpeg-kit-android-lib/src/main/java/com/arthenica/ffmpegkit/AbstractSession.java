@@ -19,7 +19,6 @@
 
 package com.arthenica.ffmpegkit;
 
-import com.arthenica.smartexception.java.Exceptions;
 
 import java.util.Date;
 import java.util.LinkedList;
@@ -348,7 +347,7 @@ public abstract class AbstractSession implements Session {
      * @param exception execution received
      */
     void fail(final Exception exception) {
-        this.failStackTrace = Exceptions.getStackTraceString(exception);
+        this.failStackTrace = android.util.Log.getStackTraceString(exception);
         this.state = SessionState.FAILED;
         this.endTime = new Date();
     }
