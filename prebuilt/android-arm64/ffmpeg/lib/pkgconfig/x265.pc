@@ -1,0 +1,11 @@
+prefix=/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: x265
+Description: H.265/HEVC video encoder
+Version: 3.4
+Libs: -L${libdir} -lx265 -lc++ -lm -ldl
+Libs.private:
+Cflags: -I${includedir}

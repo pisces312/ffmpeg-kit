@@ -1,0 +1,8 @@
+.tmp/
+build.log
+android/build/
+android/ffmpeg-kit-android-lib/build/intermediates/
+android/.gradle/
+android/local.properties
+*.iml
+.idea/
