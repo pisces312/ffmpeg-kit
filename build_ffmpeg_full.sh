@@ -176,6 +176,12 @@ if [ "$FORCE_FFMPEG" = "1" ] || [ ! -f "$PREFIX/lib/libavcodec.so" ]; then
         --enable-libx264 \
         --enable-libx265 \
         --enable-libmp3lame \
+        --enable-mediacodec \
+        --enable-jni \
+        --enable-encoder=h264_mediacodec \
+        --enable-encoder=hevc_mediacodec \
+        --enable-decoder=h264_mediacodec \
+        --enable-decoder=hevc_mediacodec \
         --enable-shared \
         --disable-static \
         --disable-doc \

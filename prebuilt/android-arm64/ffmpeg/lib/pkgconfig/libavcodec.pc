@@ -10,5 +10,5 @@ Requires:
 Requires.private: libswresample >= 6.3.100, libavutil >= 60.26.100
 Conflicts:
 Libs: -L${libdir}  -lavcodec 
-Libs.private: -pthread -lm -latomic -lmp3lame -lm -L/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib -lx264 -lm -ldl -L/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib -lx265 -lc++ -lm -ldl -lz
+Libs.private: -lm -latomic -lmp3lame -lm -L/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib -lx264 -lm -ldl -L/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib -lx265 -lc++ -lm -ldl -landroid -lmediandk -pthread -lz
 Cflags: -I${includedir}
