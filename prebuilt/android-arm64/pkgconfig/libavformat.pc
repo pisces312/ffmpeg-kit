@@ -1,0 +1,14 @@
+prefix=/home/pisces312/android_build/arm64-v8a
+exec_prefix=${prefix}
+libdir=/home/pisces312/android_build/arm64-v8a/lib
+includedir=/home/pisces312/android_build/arm64-v8a/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 62.12.100
+Requires: libavcodec >= 62.28.100, libswresample >= 6.3.100, libavutil >= 60.26.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavformat -lm -latomic -lz
+Libs.private: 
+Cflags: -I${includedir}

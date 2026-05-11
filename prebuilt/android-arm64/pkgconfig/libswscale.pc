@@ -1,0 +1,14 @@
+prefix=/home/pisces312/android_build/arm64-v8a
+exec_prefix=${prefix}
+libdir=/home/pisces312/android_build/arm64-v8a/lib
+includedir=/home/pisces312/android_build/arm64-v8a/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 9.5.100
+Requires: libavutil >= 60.26.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm -latomic
+Libs.private: 
+Cflags: -I${includedir}

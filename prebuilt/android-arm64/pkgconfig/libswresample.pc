@@ -1,0 +1,14 @@
+prefix=/home/pisces312/android_build/arm64-v8a
+exec_prefix=${prefix}
+libdir=/home/pisces312/android_build/arm64-v8a/lib
+includedir=/home/pisces312/android_build/arm64-v8a/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 6.3.100
+Requires: libavutil >= 60.26.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswresample -lm -latomic
+Libs.private: 
+Cflags: -I${includedir}
