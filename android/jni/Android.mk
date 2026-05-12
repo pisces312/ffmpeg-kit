@@ -12,20 +12,14 @@ ifeq ($(TARGET_ARCH_ABI), armeabi-v7a)
     endif
 endif
 
-ifeq ("$(shell test -e $(MY_LOCAL_PATH)/../build/.lts && echo lts)","lts")
-    MY_LTS_POSTFIX := -lts
-else
-    MY_LTS_POSTFIX :=
-endif
-
 ifeq ($(TARGET_ARCH_ABI), armeabi-v7a)
     ifeq ($(MY_ARMV7_NEON), true)
-        MY_BUILD_DIR := android-$(TARGET_ARCH)-neon$(MY_LTS_POSTFIX)
+        MY_BUILD_DIR := android-$(TARGET_ARCH)-neon
     else
-        MY_BUILD_DIR := android-$(TARGET_ARCH)$(MY_LTS_POSTFIX)
+        MY_BUILD_DIR := android-$(TARGET_ARCH)
     endif
 else
-    MY_BUILD_DIR := android-$(TARGET_ARCH)$(MY_LTS_POSTFIX)
+    MY_BUILD_DIR := android-$(TARGET_ARCH)
 endif
 
 FFMPEG_INCLUDES := $(MY_LOCAL_PATH)/../../prebuilt/$(MY_BUILD_DIR)/ffmpeg/include
@@ -38,11 +32,7 @@ LOCAL_PATH := $(MY_LOCAL_PATH)/../ffmpeg-kit-android-lib/src/main/cpp
 # DEFINE ARCH FLAGS
 ifeq ($(TARGET_ARCH_ABI), armeabi-v7a)
     MY_ARCH_FLAGS := ARM_V7A
-    ifeq ("$(shell test -e $(MY_LOCAL_PATH)/../build/.lts && echo lts)","lts")
-        MY_ARM_NEON := false
-    else
-        MY_ARM_NEON := true
-    endif
+    MY_ARM_NEON := true
 endif
 ifeq ($(TARGET_ARCH_ABI), arm64-v8a)
     MY_ARCH_FLAGS := ARM64_V8A
@@ -71,12 +61,6 @@ include $(BUILD_SHARED_LIBRARY)
 $(call import-module, cpu-features)
 
 MY_SRC_FILES := ffmpegkit.c ffprobekit.c ffmpegkit_exception.c fftools_cmdutils.c fftools_ffmpeg.c fftools_ffprobe.c fftools_ffmpeg_mux.c fftools_ffmpeg_mux_init.c fftools_ffmpeg_demux.c fftools_ffmpeg_opt.c fftools_opt_common.c fftools_ffmpeg_hw.c fftools_ffmpeg_filter.c fftools_ffmpeg_dec.c fftools_ffmpeg_enc.c fftools_ffmpeg_sched.c fftools_sync_queue.c fftools_thread_queue.c fftools_textformat.c fftools_tf_compact.c fftools_tf_default.c fftools_tf_flat.c fftools_tf_ini.c fftools_tf_json.c fftools_tf_mermaid.c fftools_tf_xml.c fftools_tw_avio.c fftools_tw_buffer.c fftools_tw_stdout.c fftools_graphprint.c fftools_resman.c fftools_graph_css.c fftools_graph_html.c
-
-ifeq ($(TARGET_PLATFORM),android-16)
-    MY_SRC_FILES += android_lts_support.c
-else ifeq ($(TARGET_PLATFORM),android-17)
-    MY_SRC_FILES += android_lts_support.c
-endif
 
 MY_CFLAGS := -Wall -Werror -Wno-unused-parameter -Wno-switch -Wno-sign-compare -Wno-parentheses -Wno-unused-const-variable
 MY_LDLIBS := -llog -lz -landroid
