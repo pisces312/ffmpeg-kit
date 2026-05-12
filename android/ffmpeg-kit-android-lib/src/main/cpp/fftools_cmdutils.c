@@ -69,7 +69,7 @@ void uninit_opts(void)
 
 void log_callback_help(void *ptr, int level, const char *fmt, va_list vl)
 {
-    vfprintf(stdout, fmt, vl);
+    vfprintf(stderr, fmt, vl);
 }
 
 void init_dynload(void)
@@ -119,7 +119,7 @@ void show_help_options(const OptionDef *options, const char *msg, int req_flags,
             continue;
 
         if (first) {
-            printf("%s\n", msg);
+            fprintf(stderr, "%s\n", msg);
             first = 0;
         }
         av_strlcpy(buf, po->name, sizeof(buf));
@@ -132,9 +132,9 @@ void show_help_options(const OptionDef *options, const char *msg, int req_flags,
         if (po->argname)
             av_strlcatf(buf, sizeof(buf), " <%s>", po->argname);
 
-        printf("-%-17s  %s\n", buf, po->help);
+        fprintf(stderr, "-%-17s  %s\n", buf, po->help);
     }
-    printf("\n");
+    fprintf(stderr, "\n");
 }
 
 void show_help_children(const AVClass *class, int flags)
@@ -143,7 +143,7 @@ void show_help_children(const AVClass *class, int flags)
     const AVClass *child;
     if (class->option) {
         av_opt_show2(&class, NULL, flags, 0);
-        printf("\n");
+        fprintf(stderr, "\n");
     }
 
     while (child = av_opt_child_class_iterate(class, &iter))

@@ -67,6 +67,7 @@
 #include "textformat/avtextformat.h"
 #include "fftools_cmdutils.h"
 #include "fftools_opt_common.h"
+#include "fftools_avtextwriters.h"
 
 #include "libavutil/thread.h"
 
@@ -2911,10 +2912,11 @@ static int opt_print_filename(void *optctx, const char *opt, const char *arg)
 
 void show_help_default_ffprobe(const char *opt, const char *arg)
 {
-    av_log_set_callback(log_callback_help);
+    /* Do NOT override the JNI log callback. av_log output must go through
+     * the JNI bridge so the Java layer can capture it. */
     show_usage();
     show_help_options(options, "Main options:", 0, 0);
-    printf("\n");
+    fprintf(stderr, "\n");
 
     show_help_children(avformat_get_class(), AV_OPT_FLAG_DECODING_PARAM);
     show_help_children(avcodec_get_class(), AV_OPT_FLAG_DECODING_PARAM);

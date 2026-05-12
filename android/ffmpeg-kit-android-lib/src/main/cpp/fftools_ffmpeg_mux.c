@@ -534,8 +534,7 @@ int print_sdp(const char *filename)
         goto fail;
 
     if (!filename) {
-        printf("SDP:\n%s\n", sdp);
-        fflush(stdout);
+        av_log(NULL, AV_LOG_STDERR, "SDP:\n%s\n", sdp);
     } else {
         ret = avio_open2(&sdp_pb, filename, AVIO_FLAG_WRITE, &int_cb, NULL);
         if (ret < 0) {
