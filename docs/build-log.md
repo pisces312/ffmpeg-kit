@@ -158,6 +158,10 @@ x265是C++库，需要`-lc++ -lm -ldl`。已修改`x265.pc`将这些依赖放到
 ### 静态库保留
 `build_ffmpeg_full.sh`不会删除x264/x265/lame的静态库(.a)，因为FFmpeg需要链接它们。
 
+### LTS模式已移除
+
+原 ffmpeg-kit 使用 `android/build/.lts` 标记文件切换 LTS/非LTS 预编译库路径。本项目只用非LTS模式（`APP_PLATFORM := android-21`），已从 `Android.mk`、`ffmpeg/Android.mk`、`ffmpeg/neon/Android.mk` 中移除所有 LTS 条件分支，简化构建。库路径硬编码为 `prebuilt/android-$(TARGET_ARCH)/`。
+
 ### AAR打包
 - WSL下无法直接运行Gradle (Android SDK build tools是Windows二进制)
 - `build_aar.sh`通过`cmd.exe`调用Windows Gradle

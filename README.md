@@ -45,6 +45,14 @@ Output: `android/ffmpeg-kit-android-lib/build/outputs/aar/ffmpeg-kit-release.aar
 - Windows Gradle (called via `cmd.exe /c "gradlew.bat"`)
 - Source code in `src/ffmpeg`, `src/x264`, `src/x265`, `src/lame`
 
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [docs/build-plan.md](docs/build-plan.md) | FFmpeg 6.0→8.1 migration plan |
+| [docs/build-log.md](docs/build-log.md) | Build environment, scripts, and results |
+| [docs/ffmpeg-modifications.md](docs/ffmpeg-modifications.md) | All changes to FFmpeg source in this fork |
+
 ## Project Structure
 
 ```
@@ -57,4 +65,5 @@ ffmpeg-kit/
     ffmpeg-kit-android-lib/ # Java wrapper library
   prebuilt/               # Built FFmpeg libraries
   src/                    # Source code (ffmpeg, x264, x265, lame)
+  docs/                   # Project documentation
 ```
