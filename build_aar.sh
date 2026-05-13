@@ -3,6 +3,7 @@ set -e
 
 export NDK=/home/pisces312/android-ndk-r25b
 export BASEDIR=/mnt/d/nili/3rd_party_projects/ffmpeg-kit
+export ANDROID_HOME=/mnt/d/nili/dev/android_sdk
 export AAR_PATH="$BASEDIR/android/ffmpeg-kit-android-lib/build/outputs/aar/ffmpeg-kit-release.aar"
 
 echo "=========================================="

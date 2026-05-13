@@ -93,7 +93,8 @@ if [ ! -f "$PREFIX/lib/libx264.a" ] || [ ! -f "$PREFIX/lib/pkgconfig/x264.pc" ];
         --enable-static \
         --disable-cli \
         --host=aarch64-linux-android \
-        --cross-prefix=$TOOLCHAIN/bin/llvm-
+        --cross-prefix=$TOOLCHAIN/bin/llvm- \
+        --extra-cflags="-march=armv8-a -fstrict-aliasing -fPIC -DANDROID -Os"
     make -j$(nproc)
     make install
     echo ">>> x264 done"
@@ -116,7 +117,9 @@ if [ ! -f "$PREFIX/lib/libx265.a" ] || [ ! -f "$PREFIX/lib/pkgconfig/x265.pc" ];
         -DHIGH_BIT_DEPTH=1 \
         -DENABLE_ASSEMBLY=0 \
         -DSTATIC_LINK_CRT=1 \
-        -DENABLE_PIC=1 .
+        -DENABLE_PIC=1 \
+        -DCMAKE_C_FLAGS="-march=armv8-a -fstrict-aliasing -fPIC -DANDROID -Os" \
+        -DCMAKE_CXX_FLAGS="-march=armv8-a -fstrict-aliasing -fPIC -DANDROID -Os" .
     make -j$(nproc)
     make install
     echo ">>> x265 done"
@@ -147,7 +150,9 @@ if [ ! -f "$PREFIX/lib/libmp3lame.a" ] || [ ! -f "$PREFIX/lib/pkgconfig/mp3lame.
         CXX="$CXX" \
         AR="$AR" \
         RANLIB="$RANLIB" \
-        STRIP="$STRIP"
+        STRIP="$STRIP" \
+        CFLAGS="-march=armv8-a -fstrict-aliasing -fPIC -DANDROID -Os" \
+        LDFLAGS="-Wl,--gc-sections"
     make -j$(nproc)
     make install
     echo ">>> lame done"
@@ -160,6 +165,11 @@ if [ "$FORCE_FFMPEG" = "1" ] || [ ! -f "$PREFIX/lib/libavcodec.so" ]; then
     echo -e "\n>>> Building FFmpeg 8.1..."
     cd $FFMPEG_SRC
     make distclean 2>/dev/null || true
+    # 补充完整的 Android arm64 编译/链接参数
+    # 参考官方 ffmpeg-kit 构建日志中的标准 CFLAGS/LDFLAGS
+    EXTRA_CFLAGS="-march=armv8-a -std=c99 -Wno-unused-function -fstrict-aliasing -DANDROID_NDK -fPIC -DANDROID -D__ANDROID__ -D__ANDROID_MIN_SDK_VERSION__=24 -Os -ffunction-sections -fdata-sections -I$PREFIX/include"
+    EXTRA_LDFLAGS="-L$PREFIX/lib -Wl,--gc-sections -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -Wl,--hash-style=both"
+
     ./configure \
         --prefix=$PREFIX \
         --target-os=android \
@@ -171,6 +181,7 @@ if [ "$FORCE_FFMPEG" = "1" ] || [ ! -f "$PREFIX/lib/libavcodec.so" ]; then
         --ranlib=$RANLIB \
         --strip=$STRIP \
         --enable-cross-compile \
+        --sysroot=$TOOLCHAIN/sysroot \
         --enable-gpl \
         --enable-nonfree \
         --enable-libx264 \
@@ -186,8 +197,9 @@ if [ "$FORCE_FFMPEG" = "1" ] || [ ! -f "$PREFIX/lib/libavcodec.so" ]; then
         --disable-static \
         --disable-doc \
         --disable-programs \
-        --extra-cflags="-I$PREFIX/include" \
-        --extra-ldflags="-L$PREFIX/lib"
+        --extra-cflags="$EXTRA_CFLAGS" \
+        --extra-ldflags="$EXTRA_LDFLAGS" \
+        --extra-libs="-lm -lc++"
     make -j$(nproc)
     make install
     echo ">>> FFmpeg done"
