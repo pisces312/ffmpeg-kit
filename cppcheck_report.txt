@@ -1,0 +1,2229 @@
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c:29:0: information: Include file: <math.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <math.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c:30:0: information: Include file: <errno.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <errno.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c:31:0: information: Include file: <malloc.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <malloc.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c:32:0: information: Include file: <stdlib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdlib.h>
+^
+1/35 files checked 0% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:20:0: information: Include file: <pthread.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <pthread.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:21:0: information: Include file: <stdatomic.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdatomic.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:22:0: information: Include file: <sys/types.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/types.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:23:0: information: Include file: <sys/stat.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/stat.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:25:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:26:0: information: Include file: "libavcodec/jni.h" not found. [missingInclude]
+#include "libavcodec/jni.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:27:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:28:0: information: Include file: "libavutil/file.h" not found. [missingInclude]
+#include "libavutil/file.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:22:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:24:0: information: Include file: <stdatomic.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdatomic.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:25:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:26:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:27:0: information: Include file: <signal.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <signal.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:25:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:27:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:28:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:29:0: information: Include file: "libavfilter/avfilter.h" not found. [missingInclude]
+#include "libavfilter/avfilter.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:30:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:31:0: information: Include file: "libswscale/swscale.h" not found. [missingInclude]
+#include "libswscale/swscale.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.h:25:0: information: Include file: <stddef.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stddef.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.h:26:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_utils.h:22:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_utils.h:24:0: information: Include file: "libavutil/common.h" not found. [missingInclude]
+#include "libavutil/common.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_utils.h:25:0: information: Include file: "libavutil/frame.h" not found. [missingInclude]
+#include "libavutil/frame.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_utils.h:26:0: information: Include file: "libavutil/rational.h" not found. [missingInclude]
+#include "libavutil/rational.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_utils.h:28:0: information: Include file: "libavcodec/packet.h" not found. [missingInclude]
+#include "libavcodec/packet.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.h:22:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.h:24:0: information: Include file: "libavcodec/packet.h" not found. [missingInclude]
+#include "libavcodec/packet.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.h:26:0: information: Include file: "libavutil/frame.h" not found. [missingInclude]
+#include "libavutil/frame.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:33:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:34:0: information: Include file: "libavformat/avio.h" not found. [missingInclude]
+#include "libavformat/avio.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:36:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:37:0: information: Include file: "libavcodec/bsf.h" not found. [missingInclude]
+#include "libavcodec/bsf.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:39:0: information: Include file: "libavfilter/avfilter.h" not found. [missingInclude]
+#include "libavfilter/avfilter.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:41:0: information: Include file: "libavutil/avutil.h" not found. [missingInclude]
+#include "libavutil/avutil.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:42:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:43:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:44:0: information: Include file: "libavutil/eval.h" not found. [missingInclude]
+#include "libavutil/eval.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:45:0: information: Include file: "libavutil/fifo.h" not found. [missingInclude]
+#include "libavutil/fifo.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:46:0: information: Include file: "libavutil/hwcontext.h" not found. [missingInclude]
+#include "libavutil/hwcontext.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:47:0: information: Include file: "libavutil/pixfmt.h" not found. [missingInclude]
+#include "libavutil/pixfmt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:48:0: information: Include file: "libavutil/rational.h" not found. [missingInclude]
+#include "libavutil/rational.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:49:0: information: Include file: "libavutil/thread.h" not found. [missingInclude]
+#include "libavutil/thread.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:50:0: information: Include file: "libavutil/threadmessage.h" not found. [missingInclude]
+#include "libavutil/threadmessage.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:52:0: information: Include file: "libswresample/swresample.h" not found. [missingInclude]
+#include "libswresample/swresample.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.h:23:0: information: Include file: <jni.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <jni.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.h:24:0: information: Include file: <android/log.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <android/log.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.h:26:0: information: Include file: "libavutil/log.h" not found. [missingInclude]
+#include "libavutil/log.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.h:27:0: information: Include file: "libavutil/ffversion.h" not found. [missingInclude]
+#include "libavutil/ffversion.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.h:23:0: information: Include file: <jni.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <jni.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c: _WIN32...
+2/35 files checked 2% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c:20:0: information: Include file: "cpu-features.h" not found. [missingInclude]
+#include "cpu-features.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.h:23:0: information: Include file: <jni.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <jni.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c: FFMPEG_KIT_ARM64_V8A...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c: FFMPEG_KIT_ARM_V7A...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c: FFMPEG_KIT_LTS...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c: FFMPEG_KIT_X86...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c: FFMPEG_KIT_X86_64...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_abidetect.c: _WIN32...
+3/35 files checked 3% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_exception.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_exception.h:23:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit_exception.h:24:0: information: Include file: <setjmp.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <setjmp.h>
+^
+4/35 files checked 3% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:20:0: information: Include file: <pthread.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <pthread.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:21:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:22:0: information: Include file: <sys/types.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/types.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:23:0: information: Include file: <sys/stat.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/stat.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:25:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:26:0: information: Include file: "libavcodec/jni.h" not found. [missingInclude]
+#include "libavcodec/jni.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:27:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffprobekit.c:28:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+5/35 files checked 3% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:22:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:24:0: information: Include file: <stdlib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdlib.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:25:0: information: Include file: <errno.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <errno.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:26:0: information: Include file: <math.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <math.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:32:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:33:0: information: Include file: "compat/va_copy.h" not found. [missingInclude]
+#include "compat/va_copy.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:34:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:35:0: information: Include file: "libswscale/swscale.h" not found. [missingInclude]
+#include "libswscale/swscale.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:36:0: information: Include file: "libswresample/swresample.h" not found. [missingInclude]
+#include "libswresample/swresample.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:37:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:38:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:39:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:40:0: information: Include file: "libavutil/display.h" not found. [missingInclude]
+#include "libavutil/display.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:41:0: information: Include file: "libavutil/getenv_utf8.h" not found. [missingInclude]
+#include "libavutil/getenv_utf8.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:42:0: information: Include file: "libavutil/libm.h" not found. [missingInclude]
+#include "libavutil/libm.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:43:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:44:0: information: Include file: "libavutil/parseutils.h" not found. [missingInclude]
+#include "libavutil/parseutils.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:45:0: information: Include file: "libavutil/eval.h" not found. [missingInclude]
+#include "libavutil/eval.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:46:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:47:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_fopen_utf8.h:22:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.h:24:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1401:59: style: Same expression '!tg->nb_tiles' found multiple times in chain of '||' operators. [duplicateExpression]
+                    !tg->width       || !tg->height       || !tg->nb_tiles)
+                                                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1116:17: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+                continue;
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:423:17: style: The scope of the variable 'opt' can be reduced. [variableScope]
+    const char *opt;
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:458:12: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int i, ret;
+           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1492:47: style: inconclusive: Function 'setup_find_stream_info_opts' argument 2 names different: declaration 'codec_opts' definition 'local_codec_opts'. [funcArgNamesDifferent]
+                                AVDictionary *local_codec_opts,
+                                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:460:47: note: Function 'setup_find_stream_info_opts' argument 2 names different: declaration 'codec_opts' definition 'local_codec_opts'.
+                                AVDictionary *codec_opts,
+                                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1492:47: note: Function 'setup_find_stream_info_opts' argument 2 names different: declaration 'codec_opts' definition 'local_codec_opts'.
+                                AVDictionary *local_codec_opts,
+                                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1540:33: style: inconclusive: Function 'allocate_array_elem' argument 1 names different: declaration 'array' definition 'ptr'. [funcArgNamesDifferent]
+void *allocate_array_elem(void *ptr, size_t elem_size, int *nb_elems)
+                                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.h:534:33: note: Function 'allocate_array_elem' argument 1 names different: declaration 'array' definition 'ptr'.
+void *allocate_array_elem(void *array, size_t elem_size, int *nb_elems);
+                                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1540:33: note: Function 'allocate_array_elem' argument 1 names different: declaration 'array' definition 'ptr'.
+void *allocate_array_elem(void *ptr, size_t elem_size, int *nb_elems)
+                                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:245:45: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+    void *dst = po->flags & OPT_FLAG_OFFSET ?
+                                            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1338:45: style: Parameter 's' can be declared as pointer to const [constParameterPointer]
+int check_stream_specifier(AVFormatContext *s, AVStream *st, const char *spec)
+                                            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1338:58: style: Parameter 'st' can be declared as pointer to const [constParameterPointer]
+int check_stream_specifier(AVFormatContext *s, AVStream *st, const char *spec)
+                                                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1492:47: style: Parameter 'local_codec_opts' can be declared as pointer to const [constParameterPointer]
+                                AVDictionary *local_codec_opts,
+                                              ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c: CONFIG_AVDEVICE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c: CONFIG_SWRESAMPLE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c: CONFIG_SWSCALE...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_fopen_utf8.h:30:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_fopen_utf8.h:31:0: information: Include file: "libavutil/wchar_filename.h" not found. [missingInclude]
+#include "libavutil/wchar_filename.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:52:0: information: Include file: <windows.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <windows.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:53:0: information: Include file: "compat/w32dlfcn.h" not found. [missingInclude]
+#include "compat/w32dlfcn.h"
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c: _WIN32...
+6/35 files checked 8% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:26:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:28:0: information: Include file: <errno.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <errno.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:29:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:30:0: information: Include file: <stdatomic.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdatomic.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:31:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:32:0: information: Include file: <stdlib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdlib.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:33:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:34:0: information: Include file: <time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <time.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:71:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:72:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:73:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:74:0: information: Include file: "libavutil/time.h" not found. [missingInclude]
+#include "libavutil/time.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:76:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:78:0: information: Include file: "libavdevice/avdevice.h" not found. [missingInclude]
+#include "libavdevice/avdevice.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:87:0: information: Include file: "graph/graphprint.h" not found. [missingInclude]
+#include "graph/graphprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:877:33: style: Condition '(k=read_key())!='\n'' is always true [knownConditionTrueFalse]
+        while ((k = read_key()) != '\n' && k != '\r' && i < sizeof(buf)-1)
+                                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:877:29: note: Calling function 'read_key' returns -1
+        while ((k = read_key()) != '\n' && k != '\r' && i < sizeof(buf)-1)
+                            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:877:33: note: Condition '(k=read_key())!='\n'' is always true
+        while ((k = read_key()) != '\n' && k != '\r' && i < sizeof(buf)-1)
+                                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:150:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:559:17: style: The scope of the variable 'va' can be reduced. [variableScope]
+        va_list va;
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:560:14: style: The scope of the variable 'buf' can be reduced. [variableScope]
+        char buf[1024];
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:602:20: style: The scope of the variable 'last_time' can be reduced. [variableScope]
+    static int64_t last_time = -1;
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:608:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:856:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i, key;
+        ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: CONFIG_AVDEVICE...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:82:0: information: Include file: "compat/android/binder.h" not found. [missingInclude]
+#include "compat/android/binder.h"
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: CONFIG_MEDIACODEC...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:51:0: information: Include file: <windows.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <windows.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:52:0: information: Include file: <psapi.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <psapi.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_GETPROCESSMEMORYINFO...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:48:0: information: Include file: <windows.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <windows.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_GETPROCESSTIMES...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_GETRUSAGE...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:37:0: information: Include file: <io.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <io.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_IO_H...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:68:0: information: Include file: <conio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <conio.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_KBHIT...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:55:0: information: Include file: <windows.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <windows.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_SETCONSOLECTRLHANDLER...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:44:0: information: Include file: <sys/time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/time.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:45:0: information: Include file: <sys/types.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/types.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:46:0: information: Include file: <sys/resource.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/resource.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_SYS_RESOURCE_H...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:59:0: information: Include file: <sys/select.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/select.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_SYS_SELECT_H...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:63:0: information: Include file: <fcntl.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <fcntl.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:64:0: information: Include file: <sys/ioctl.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/ioctl.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:65:0: information: Include file: <sys/time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/time.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:66:0: information: Include file: <termios.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <termios.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c: HAVE_TERMIOS_H...
+7/35 files checked 11% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:19:0: information: Include file: <stdbit.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdbit.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:21:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:22:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:23:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:24:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:25:0: information: Include file: "libavutil/log.h" not found. [missingInclude]
+#include "libavutil/log.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:26:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:27:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:28:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:29:0: information: Include file: "libavutil/pixfmt.h" not found. [missingInclude]
+#include "libavutil/pixfmt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:30:0: information: Include file: "libavutil/stereo3d.h" not found. [missingInclude]
+#include "libavutil/stereo3d.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:31:0: information: Include file: "libavutil/time.h" not found. [missingInclude]
+#include "libavutil/time.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:32:0: information: Include file: "libavutil/timestamp.h" not found. [missingInclude]
+#include "libavutil/timestamp.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:34:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:35:0: information: Include file: "libavcodec/codec.h" not found. [missingInclude]
+#include "libavcodec/codec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:545:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:1029:31: style: inconclusive: Function 'dec_request_view' argument 1 names different: declaration 'dec' definition 'd'. [funcArgNamesDifferent]
+int dec_request_view(Decoder *d, const ViewSpecifier *vs,
+                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:913:31: note: Function 'dec_request_view' argument 1 names different: declaration 'dec' definition 'd'.
+int dec_request_view(Decoder *dec, const ViewSpecifier *vs,
+                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:1029:31: note: Function 'dec_request_view' argument 1 names different: declaration 'dec' definition 'd'.
+int dec_request_view(Decoder *d, const ViewSpecifier *vs,
+                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:1757:29: style: inconclusive: Function 'dec_filter_add' argument 1 names different: declaration 'dec' definition 'd'. [funcArgNamesDifferent]
+int dec_filter_add(Decoder *d, InputFilter *ifilter, InputFilterOptions *opts,
+                            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:900:29: note: Function 'dec_filter_add' argument 1 names different: declaration 'dec' definition 'd'.
+int dec_filter_add(Decoder *dec, InputFilter *ifilter, InputFilterOptions *opts,
+                            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:1757:29: note: Function 'dec_filter_add' argument 1 names different: declaration 'dec' definition 'd'.
+int dec_filter_add(Decoder *d, InputFilter *ifilter, InputFilterOptions *opts,
+                            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:345:18: style: Variable 'dp' can be declared as pointer to const [constVariablePointer]
+    DecoderPriv *dp = avctx->opaque;
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c:1760:18: style: Variable 'dp' can be declared as pointer to const [constVariablePointer]
+    DecoderPriv *dp = dp_from_dec(d);
+                 ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c: FFMPEG_OPT_TOP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_dec.c: _WIN32...
+8/35 files checked 16% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:19:0: information: Include file: <float.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <float.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:20:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:26:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:27:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:28:0: information: Include file: "libavutil/display.h" not found. [missingInclude]
+#include "libavutil/display.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:29:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:30:0: information: Include file: "libavutil/intreadwrite.h" not found. [missingInclude]
+#include "libavutil/intreadwrite.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:31:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:32:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:33:0: information: Include file: "libavutil/parseutils.h" not found. [missingInclude]
+#include "libavutil/parseutils.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:34:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:35:0: information: Include file: "libavutil/time.h" not found. [missingInclude]
+#include "libavutil/time.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:36:0: information: Include file: "libavutil/timestamp.h" not found. [missingInclude]
+#include "libavutil/timestamp.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:38:0: information: Include file: "libavcodec/bsf.h" not found. [missingInclude]
+#include "libavcodec/bsf.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:39:0: information: Include file: "libavcodec/packet.h" not found. [missingInclude]
+#include "libavcodec/packet.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:41:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:457:13: style: Condition 'ret<0' is always false [knownConditionTrueFalse]
+    if (ret < 0)
+            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:456:25: note: Calling function 'ist_dts_update' returns 0
+    ret = ist_dts_update(ds, pkt, fd);
+                        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:456:25: note: Assignment 'ret=ist_dts_update(ds,pkt,fd)', assigned value is 0
+    ret = ist_dts_update(ds, pkt, fd);
+                        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:457:13: note: Condition 'ret<0' is always false
+    if (ret < 0)
+            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:1783:47: style: Condition 'is_windows_reserved_device_name(f)' is always false [knownConditionTrueFalse]
+    if (!*f || is_windows_reserved_device_name(f))
+                                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:1783:47: note: Calling function 'is_windows_reserved_device_name' returns 0
+    if (!*f || is_windows_reserved_device_name(f))
+                                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:1783:47: note: Condition 'is_windows_reserved_device_name(f)' is always false
+    if (!*f || is_windows_reserved_device_name(f))
+                                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:909:30: style: inconclusive: Function 'ifile_close' argument 1 names different: declaration 'f' definition 'pf'. [funcArgNamesDifferent]
+void ifile_close(InputFile **pf)
+                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:941:30: note: Function 'ifile_close' argument 1 names different: declaration 'f' definition 'pf'.
+void ifile_close(InputFile **f);
+                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:909:30: note: Function 'ifile_close' argument 1 names different: declaration 'f' definition 'pf'.
+void ifile_close(InputFile **pf)
+                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:176:22: style: Variable 'ds' can be declared as pointer to const [constVariablePointer]
+        DemuxStream *ds = ds_from_ist(ist);
+                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:686:26: style: Variable 'ds' can be declared as pointer to const [constVariablePointer]
+            DemuxStream *ds = ds_from_ist(ifile->streams[p->stream_index[k]]);
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:697:40: style: Parameter 'f' can be declared as pointer to const [constParameterPointer]
+static void thread_set_name(InputFile *f)
+                                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:901:23: style: Variable 'istg' can be declared as pointer to const [constVariablePointer]
+    InputStreamGroup *istg = *pistg;
+                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c:547:21: style: Variable 'elapsed' is assigned a value that is never used. [unreadVariable]
+            elapsed = wc_elapsed;
+                    ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c: FFMPEG_OPT_TOP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c: HAVE_DOS_PATHS...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_demux.c: _WIN32...
+9/35 files checked 23% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:19:0: information: Include file: <math.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <math.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:20:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:24:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:25:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:26:0: information: Include file: "libavutil/avutil.h" not found. [missingInclude]
+#include "libavutil/avutil.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:27:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:28:0: information: Include file: "libavutil/display.h" not found. [missingInclude]
+#include "libavutil/display.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:29:0: information: Include file: "libavutil/eval.h" not found. [missingInclude]
+#include "libavutil/eval.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:30:0: information: Include file: "libavutil/frame.h" not found. [missingInclude]
+#include "libavutil/frame.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:31:0: information: Include file: "libavutil/intreadwrite.h" not found. [missingInclude]
+#include "libavutil/intreadwrite.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:32:0: information: Include file: "libavutil/log.h" not found. [missingInclude]
+#include "libavutil/log.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:33:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:34:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:35:0: information: Include file: "libavutil/rational.h" not found. [missingInclude]
+#include "libavutil/rational.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:36:0: information: Include file: "libavutil/time.h" not found. [missingInclude]
+#include "libavutil/time.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:37:0: information: Include file: "libavutil/timestamp.h" not found. [missingInclude]
+#include "libavutil/timestamp.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:39:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:474:50: warning: Possible null pointer dereference: pkt [nullPointer]
+    AVRational   tb = frame ? frame->time_base : pkt->time_base;
+                                                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:630:62: note: Calling function 'enc_stats_write', 4th argument 'NULL' value is 0
+            enc_stats_write(ost, &ost->enc_stats_pre, frame, NULL,
+                                                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:474:50: note: Null pointer dereference
+    AVRational   tb = frame ? frame->time_base : pkt->time_base;
+                                                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:475:44: warning: Possible null pointer dereference: pkt [nullPointer]
+    int64_t     pts = frame ? frame->pts : pkt->pts;
+                                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:630:62: note: Calling function 'enc_stats_write', 4th argument 'NULL' value is 0
+            enc_stats_write(ost, &ost->enc_stats_pre, frame, NULL,
+                                                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:475:44: note: Null pointer dereference
+    int64_t     pts = frame ? frame->pts : pkt->pts;
+                                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:482:37: warning: Possible null pointer dereference: pkt [nullPointer]
+    if (frame ? frame->opaque_ref : pkt->opaque_ref) {
+                                    ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:630:62: note: Calling function 'enc_stats_write', 4th argument 'NULL' value is 0
+            enc_stats_write(ost, &ost->enc_stats_pre, frame, NULL,
+                                                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:482:37: note: Null pointer dereference
+    if (frame ? frame->opaque_ref : pkt->opaque_ref) {
+                                    ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:385:9: style: The scope of the variable 'subtitle_out_size' can be reduced. [variableScope]
+    int subtitle_out_size, nb, i, ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:385:35: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int subtitle_out_size, nb, i, ret;
+                                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:379:40: style: Parameter 'of' can be declared as pointer to const [constParameterPointer]
+static int do_subtitle_out(OutputFile *of, OutputStream *ost, const AVSubtitle *sub,
+                                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:220:35: error: Uninitialized struct member: fd.frame_rate_filter [uninitStructMember]
+        enc_ctx->framerate      = fd->frame_rate_filter;
+                                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c:103:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c: FFMPEG_OPT_TOP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_enc.c: _WIN32...
+10/35 files checked 26% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:21:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:24:0: information: Include file: "graph/graphprint.h" not found. [missingInclude]
+#include "graph/graphprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:26:0: information: Include file: "libavfilter/avfilter.h" not found. [missingInclude]
+#include "libavfilter/avfilter.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:27:0: information: Include file: "libavfilter/buffersink.h" not found. [missingInclude]
+#include "libavfilter/buffersink.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:28:0: information: Include file: "libavfilter/buffersrc.h" not found. [missingInclude]
+#include "libavfilter/buffersrc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:30:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:31:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:32:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:33:0: information: Include file: "libavutil/channel_layout.h" not found. [missingInclude]
+#include "libavutil/channel_layout.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:34:0: information: Include file: "libavutil/downmix_info.h" not found. [missingInclude]
+#include "libavutil/downmix_info.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:35:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:36:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:37:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:38:0: information: Include file: "libavutil/pixfmt.h" not found. [missingInclude]
+#include "libavutil/pixfmt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:39:0: information: Include file: "libavutil/samplefmt.h" not found. [missingInclude]
+#include "libavutil/samplefmt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:40:0: information: Include file: "libavutil/time.h" not found. [missingInclude]
+#include "libavutil/time.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:41:0: information: Include file: "libavutil/timestamp.h" not found. [missingInclude]
+#include "libavutil/timestamp.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3340:11: style: Variable 'o' is reassigned a value before the old one has been used. [redundantAssignment]
+        o = (intptr_t)fgt.frame->opaque;
+          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3338:11: note: o is assigned
+        o = (intptr_t)fgt.frame->opaque;
+          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3340:11: note: o is overwritten
+        o = (intptr_t)fgt.frame->opaque;
+          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:300:21: style: The scope of the variable 'dst2' can be reduced. [variableScope]
+    uint32_t *pal, *dst2;
+                    ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:301:20: style: The scope of the variable 'src2' can be reduced. [variableScope]
+    uint8_t *src, *src2;
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2958:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:911:17: style: Local variable 'ret' shadows outer variable [shadowVariable]
+            int ret = set_channel_layout(ofp, opts->ch_layouts, &opts->ch_layout);
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:819:9: note: Shadowed declaration
+    int ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:911:17: note: Shadow variable
+            int ret = set_channel_layout(ofp, opts->ch_layouts, &opts->ch_layout);
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1340:18: style: Local variable 'i' shadows outer variable [shadowVariable]
+        for (int i = 0; i < nb_filtergraphs; i++) {
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1308:9: note: Shadowed declaration
+    int i, ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1340:18: note: Shadow variable
+        for (int i = 0; i < nb_filtergraphs; i++) {
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1418:18: style: Local variable 'i' shadows outer variable [shadowVariable]
+        for (int i = 0; i < nb_filtergraphs; i++) {
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1308:9: note: Shadowed declaration
+    int i, ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1418:18: note: Shadow variable
+        for (int i = 0; i < nb_filtergraphs; i++) {
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2149:14: style: Local variable 'i' shadows outer variable [shadowVariable]
+    for (int i = 0; i < fg->nb_outputs; i++) {
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2069:28: note: Shadowed declaration
+    int ret = AVERROR_BUG, i, simple = filtergraph_is_simple(fg);
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2149:14: note: Shadow variable
+    for (int i = 0; i < fg->nb_outputs; i++) {
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2193:14: style: Local variable 'i' shadows outer variable [shadowVariable]
+    for (int i = 0; i < fg->nb_inputs; i++) {
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2069:28: note: Shadowed declaration
+    int ret = AVERROR_BUG, i, simple = filtergraph_is_simple(fg);
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2193:14: note: Shadow variable
+    for (int i = 0; i < fg->nb_inputs; i++) {
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2214:14: style: Local variable 'i' shadows outer variable [shadowVariable]
+    for (int i = 0; i < fg->nb_inputs; i++) {
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2069:28: note: Shadowed declaration
+    int ret = AVERROR_BUG, i, simple = filtergraph_is_simple(fg);
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2214:14: note: Shadow variable
+    for (int i = 0; i < fg->nb_inputs; i++) {
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3395:30: style: Local variable 'ifp' shadows outer variable [shadowVariable]
+            InputFilterPriv *ifp = ifp_from_ifilter(fg->inputs[i]);
+                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3322:26: note: Shadowed declaration
+        InputFilterPriv *ifp = NULL;
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3395:30: note: Shadow variable
+            InputFilterPriv *ifp = ifp_from_ifilter(fg->inputs[i]);
+                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:300:15: style: Variable 'pal' can be declared as pointer to const [constVariablePointer]
+    uint32_t *pal, *dst2;
+              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:301:20: style: Variable 'src2' can be declared as pointer to const [constVariablePointer]
+    uint8_t *src, *src2;
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:620:26: style: Variable 'ifp' can be declared as pointer to const [constVariablePointer]
+        InputFilterPriv *ifp = ifp_from_ifilter(fg->inputs[i]);
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:643:23: style: Variable 'ofp' can be declared as pointer to const [constVariablePointer]
+    OutputFilterPriv *ofp = obj;
+                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1336:25: style: Variable 'st' can be declared as pointer to const [constVariablePointer]
+        AVStream       *st = NULL;
+                        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1649:18: style: Variable 'displaymatrix' can be declared as pointer to const [constVariablePointer]
+        int32_t *displaymatrix = ofp->displaymatrix;
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1747:80: style: Parameter 'out' can be declared as pointer to const [constParameterPointer]
+                                         OutputFilter *ofilter, AVFilterInOut *out)
+                                                                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:1918:18: style: Variable 'displaymatrix' can be declared as pointer to const [constVariablePointer]
+        int32_t *displaymatrix = ifp->displaymatrix;
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2788:25: style: Variable 'fgp' can be declared as pointer to const [constVariablePointer]
+    FilterGraphPriv    *fgp = fgp_from_fg(ofp->ofilter.graph);
+                        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2873:22: style: Variable 'fgp' can be declared as pointer to const [constVariablePointer]
+    FilterGraphPriv *fgp = fgp_from_fg(fg);
+                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:2879:30: style: Variable 'ifp' can be declared as pointer to const [constVariablePointer]
+            InputFilterPriv *ifp = ifp_from_ifilter(fg->inputs[i]);
+                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3084:22: style: Variable 'sd' can be declared as pointer to const [constVariablePointer]
+    AVFrameSideData *sd;
+                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c:3344:28: style: Variable 'fc' can be declared as pointer to const [constVariablePointer]
+            FilterCommand *fc;
+                           ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c: FFMPEG_OPT_VSYNC_DROP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_filter.c: _WIN32...
+11/35 files checked 36% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c:19:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c:21:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c:92:60: style: inconclusive: Function 'hw_device_init_from_string' argument 2 names different: declaration 'dev' definition 'dev_out'. [funcArgNamesDifferent]
+int hw_device_init_from_string(const char *arg, HWDevice **dev_out)
+                                                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:863:60: note: Function 'hw_device_init_from_string' argument 2 names different: declaration 'dev' definition 'dev_out'.
+int hw_device_init_from_string(const char *arg, HWDevice **dev);
+                                                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c:92:60: note: Function 'hw_device_init_from_string' argument 2 names different: declaration 'dev' definition 'dev_out'.
+int hw_device_init_from_string(const char *arg, HWDevice **dev_out)
+                                                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c:103:19: style: Local variable 'options' shadows outer variable [shadowVariable]
+    AVDictionary *options = NULL;
+                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:793:24: note: Shadowed declaration
+extern const OptionDef options[];
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c:103:19: note: Shadow variable
+    AVDictionary *options = NULL;
+                  ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_hw.c: _WIN32...
+12/35 files checked 37% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:19:0: information: Include file: <stdatomic.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdatomic.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:20:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:21:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.h:24:0: information: Include file: <stdatomic.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdatomic.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.h:25:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.h:29:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.h:31:0: information: Include file: "libavcodec/packet.h" not found. [missingInclude]
+#include "libavcodec/packet.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.h:33:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.h:34:0: information: Include file: "libavutil/fifo.h" not found. [missingInclude]
+#include "libavutil/fifo.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:28:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:29:0: information: Include file: "libavutil/fifo.h" not found. [missingInclude]
+#include "libavutil/fifo.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:30:0: information: Include file: "libavutil/intreadwrite.h" not found. [missingInclude]
+#include "libavutil/intreadwrite.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:31:0: information: Include file: "libavutil/log.h" not found. [missingInclude]
+#include "libavutil/log.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:32:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:33:0: information: Include file: "libavutil/time.h" not found. [missingInclude]
+#include "libavutil/time.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:34:0: information: Include file: "libavutil/timestamp.h" not found. [missingInclude]
+#include "libavutil/timestamp.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:36:0: information: Include file: "libavcodec/packet.h" not found. [missingInclude]
+#include "libavcodec/packet.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:38:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:39:0: information: Include file: "libavformat/avio.h" not found. [missingInclude]
+#include "libavformat/avio.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:66:24: style: The scope of the variable 'desc' can be reduced. [variableScope]
+    static const char *desc[] = {
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:372:36: style: Parameter 'mux' can be declared as pointer to const [constParameterPointer]
+static void thread_set_name(Muxer *mux)
+                                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c:705:24: style: Variable 'ms' can be declared as pointer to const [constVariablePointer]
+        MuxStream     *ms = ms_from_ost(ost);
+                       ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c: FFMPEG_OPT_VSYNC_DROP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux.c: _WIN32...
+13/35 files checked 39% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:21:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:29:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:30:0: information: Include file: "libavformat/avio.h" not found. [missingInclude]
+#include "libavformat/avio.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:32:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:34:0: information: Include file: "libavfilter/avfilter.h" not found. [missingInclude]
+#include "libavfilter/avfilter.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:36:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:37:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:38:0: information: Include file: "libavutil/avutil.h" not found. [missingInclude]
+#include "libavutil/avutil.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:39:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:40:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:41:0: information: Include file: "libavutil/display.h" not found. [missingInclude]
+#include "libavutil/display.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:42:0: information: Include file: "libavutil/getenv_utf8.h" not found. [missingInclude]
+#include "libavutil/getenv_utf8.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:43:0: information: Include file: "libavutil/iamf.h" not found. [missingInclude]
+#include "libavutil/iamf.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:44:0: information: Include file: "libavutil/intreadwrite.h" not found. [missingInclude]
+#include "libavutil/intreadwrite.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:45:0: information: Include file: "libavutil/log.h" not found. [missingInclude]
+#include "libavutil/log.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:46:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:47:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:48:0: information: Include file: "libavutil/parseutils.h" not found. [missingInclude]
+#include "libavutil/parseutils.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:49:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:2835:24: style: The scope of the variable 'm' can be reduced. [variableScope]
+        AVDictionary **m;
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:3026:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:1628:22: style: Local variable 'j' shadows outer variable [shadowVariable]
+            for (int j = 0; j < istg->stg->nb_streams; j++) {
+                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:1616:14: note: Shadowed declaration
+    for (int j = 0; j < nb_input_files; j++) {
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:1628:22: note: Shadow variable
+            for (int j = 0; j < istg->stg->nb_streams; j++) {
+                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:1475:15: style: Variable 'p' can be declared as pointer to const [constVariablePointer]
+        char *p = o->max_frames.opt[i].specifier;
+              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:1629:27: style: Variable 'st' can be declared as pointer to const [constVariablePointer]
+                AVStream *st = istg->stg->streams[j];
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:2055:20: style: Variable 'src' can be declared as pointer to const [constVariablePointer]
+        MuxStream *src = ms_from_ost(mux->of.streams[i]);
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:2061:24: style: Variable 'dst' can be declared as pointer to const [constVariablePointer]
+            MuxStream *dst = ms_from_ost(mux->of.streams[j]);
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:2109:59: style: Parameter 'oc' can be declared as pointer to const [constParameterPointer]
+static int setup_sync_queues(Muxer *mux, AVFormatContext *oc,
+                                                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:2161:28: style: Variable 'ms' can be declared as pointer to const [constVariablePointer]
+            MuxStream     *ms = ms_from_ost(ost);
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:2532:38: style: Variable 'element' can be declared as pointer to const [constVariablePointer]
+                AVIAMFSubmixElement *element = submix->elements[j];
+                                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:582:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c:2557:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+        ret = AVERROR(EINVAL);
+            ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: FFMPEG_OPT_ENC_TIME_BASE_NUM...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: FFMPEG_OPT_ENC_TIME_BASE_NUM=0...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: FFMPEG_OPT_FILTER_SCRIPT...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: FFMPEG_OPT_FORCE_KF_SOURCE_NO_DROP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: FFMPEG_OPT_TOP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: FFMPEG_OPT_VSYNC...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: FFMPEG_OPT_VSYNC_DROP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_mux_init.c: _WIN32...
+14/35 files checked 50% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:21:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:35:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:37:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:38:0: information: Include file: "libavcodec/bsf.h" not found. [missingInclude]
+#include "libavcodec/bsf.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:40:0: information: Include file: "libavfilter/avfilter.h" not found. [missingInclude]
+#include "libavfilter/avfilter.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:42:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:43:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:44:0: information: Include file: "libavutil/avutil.h" not found. [missingInclude]
+#include "libavutil/avutil.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:45:0: information: Include file: "libavutil/mathematics.h" not found. [missingInclude]
+#include "libavutil/mathematics.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:46:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:47:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:48:0: information: Include file: "libavutil/parseutils.h" not found. [missingInclude]
+#include "libavutil/parseutils.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:49:0: information: Include file: "libavutil/stereo3d.h" not found. [missingInclude]
+#include "libavutil/stereo3d.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:50:0: information: Include file: "graph/graphprint.h" not found. [missingInclude]
+#include "graph/graphprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:427:24: style: Expression is always true because 'else if' condition is opposite to previous condition at line 424. [multiCondition]
+            } else if (copy_ts)
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:424:22: note: first condition
+            else if (!copy_ts) {
+                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:427:24: note: else if condition is opposite to first condition
+            } else if (copy_ts)
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:1404:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (show_advanced)
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:1400:9: note: First condition
+    if (show_advanced)
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:1404:9: note: Second condition
+    if (show_advanced)
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:403:51: style: The scope of the variable 'abs_start_seek' can be reduced. [variableScope]
+        int64_t new_start_time = INT64_MAX, diff, abs_start_seek;
+                                                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:439:17: style: The scope of the variable 'adjustment' can be reduced. [variableScope]
+        int64_t adjustment;
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:440:50: style: The scope of the variable 'self_seek_start' can be reduced. [variableScope]
+        int64_t self_start_time, ref_start_time, self_seek_start, ref_seek_start;
+                                                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:440:67: style: The scope of the variable 'ref_seek_start' can be reduced. [variableScope]
+        int64_t self_start_time, ref_start_time, self_seek_start, ref_seek_start;
+                                                                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:1447:12: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int i, ret;
+           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:805:68: style: inconclusive: Function 'find_codec' argument 5 names different: declaration 'codec' definition 'pcodec'. [funcArgNamesDifferent]
+               enum AVMediaType type, int encoder, const AVCodec **pcodec)
+                                                                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.h:815:68: note: Function 'find_codec' argument 5 names different: declaration 'codec' definition 'pcodec'.
+               enum AVMediaType type, int encoder, const AVCodec **codec);
+                                                                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:805:68: note: Function 'find_codec' argument 5 names different: declaration 'codec' definition 'pcodec'.
+               enum AVMediaType type, int encoder, const AVCodec **pcodec)
+                                                                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:183:55: style: Parameter 'fc' can be declared as pointer to const [constParameterPointer]
+                                     AVFormatContext *fc, AVStream *st)
+                                                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:247:61: style: Parameter 'fc' can be declared as pointer to const [constParameterPointer]
+                                           AVFormatContext *fc, AVStreamGroup *stg)
+                                                            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:868:25: style: Variable 'file' can be declared as pointer to const [constVariablePointer]
+             InputFile *file = input_files[i];
+                        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:1056:16: style: Variable 'today' can be declared as pointer to const [constVariablePointer]
+    struct tm *today = localtime(&today2);
+               ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: CONFIG_AVDEVICE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: CONFIG_QSV...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: CONFIG_SWRESAMPLE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: CONFIG_SWSCALE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: CONFIG_VAAPI...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: FFMPEG_OPT_ADRIFT_THRESHOLD...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: FFMPEG_OPT_FILTER_SCRIPT...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: FFMPEG_OPT_QPHIST...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: FFMPEG_OPT_TOP...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: FFMPEG_OPT_VSYNC...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c: FFMPEG_OPT_VSYNC_DROP...
+15/35 files checked 58% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:22:0: information: Include file: <stdatomic.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdatomic.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:23:0: information: Include file: <stddef.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stddef.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:24:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.h:22:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:32:0: information: Include file: "libavcodec/packet.h" not found. [missingInclude]
+#include "libavcodec/packet.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:34:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:35:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:36:0: information: Include file: "libavutil/fifo.h" not found. [missingInclude]
+#include "libavutil/fifo.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:37:0: information: Include file: "libavutil/frame.h" not found. [missingInclude]
+#include "libavutil/frame.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:38:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:39:0: information: Include file: "libavutil/thread.h" not found. [missingInclude]
+#include "libavutil/thread.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:40:0: information: Include file: "libavutil/threadmessage.h" not found. [missingInclude]
+#include "libavutil/threadmessage.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:41:0: information: Include file: "libavutil/time.h" not found. [missingInclude]
+#include "libavutil/time.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1935:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:377:20: style: Checking if unsigned expression 'queue_size' is less than zero. [unsignedLessThanZero]
+    if (queue_size <= 0) {
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:477:27: style: inconclusive: Function 'sch_free' argument 1 names different: declaration 'sch' definition 'psch'. [funcArgNamesDifferent]
+void sch_free(Scheduler **psch)
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.h:134:27: note: Function 'sch_free' argument 1 names different: declaration 'sch' definition 'psch'.
+void sch_free(Scheduler **sch);
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:477:27: note: Function 'sch_free' argument 1 names different: declaration 'sch' definition 'psch'.
+void sch_free(Scheduler **psch)
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:643:23: style: inconclusive: Function 'sch_add_mux' argument 4 names different: declaration 'ctx' definition 'arg'. [funcArgNamesDifferent]
+                void *arg, int sdp_auto, unsigned thread_queue_size)
+                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.h:251:23: note: Function 'sch_add_mux' argument 4 names different: declaration 'ctx' definition 'arg'.
+                void *ctx, int sdp_auto, unsigned thread_queue_size);
+                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:643:23: note: Function 'sch_add_mux' argument 4 names different: declaration 'ctx' definition 'arg'.
+                void *arg, int sdp_auto, unsigned thread_queue_size)
+                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1872:17: style: Local variable 'enc' shadows outer argument [shadowArgument]
+        SchEnc *enc;
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1835:51: note: Shadowed declaration
+static int send_to_enc_sq(Scheduler *sch, SchEnc *enc, AVFrame *frame)
+                                                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1872:17: note: Shadow variable
+        SchEnc *enc;
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1419:27: style: Variable 'ms' can be declared as pointer to const [constVariablePointer]
+            SchMuxStream *ms = &mux->streams[j];
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1442:26: style: Variable 'fi' can be declared as pointer to const [constVariablePointer]
+            SchFilterIn *fi = &fg->inputs[j];
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1652:27: style: Variable 'ms' can be declared as pointer to const [constVariablePointer]
+            SchMuxStream *ms = &mux->streams[j];
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1671:26: style: Variable 'fi' can be declared as pointer to const [constVariablePointer]
+            SchFilterIn *fi = &fg->inputs[j];
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c:1681:27: style: Variable 'fo' can be declared as pointer to const [constVariablePointer]
+            SchFilterOut *fo = &fg->outputs[j];
+                          ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_sched.c: _WIN32...
+16/35 files checked 65% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:26:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:27:0: information: Include file: "libavutil/ffversion.h" not found. [missingInclude]
+#include "libavutil/ffversion.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:29:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:30:0: information: Include file: <math.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <math.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:32:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:33:0: information: Include file: "libavformat/version.h" not found. [missingInclude]
+#include "libavformat/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:34:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:35:0: information: Include file: "libavcodec/version.h" not found. [missingInclude]
+#include "libavcodec/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:36:0: information: Include file: "libavutil/ambient_viewing_environment.h" not found. [missingInclude]
+#include "libavutil/ambient_viewing_environment.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:37:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:38:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:39:0: information: Include file: "libavutil/avutil.h" not found. [missingInclude]
+#include "libavutil/avutil.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:40:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:41:0: information: Include file: "libavutil/channel_layout.h" not found. [missingInclude]
+#include "libavutil/channel_layout.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:42:0: information: Include file: "libavutil/display.h" not found. [missingInclude]
+#include "libavutil/display.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:43:0: information: Include file: "libavutil/film_grain_params.h" not found. [missingInclude]
+#include "libavutil/film_grain_params.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:44:0: information: Include file: "libavutil/hdr_dynamic_metadata.h" not found. [missingInclude]
+#include "libavutil/hdr_dynamic_metadata.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:45:0: information: Include file: "libavutil/iamf.h" not found. [missingInclude]
+#include "libavutil/iamf.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:46:0: information: Include file: "libavutil/mastering_display_metadata.h" not found. [missingInclude]
+#include "libavutil/mastering_display_metadata.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:47:0: information: Include file: "libavutil/hdr_dynamic_vivid_metadata.h" not found. [missingInclude]
+#include "libavutil/hdr_dynamic_vivid_metadata.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:48:0: information: Include file: "libavutil/dovi_meta.h" not found. [missingInclude]
+#include "libavutil/dovi_meta.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:49:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:50:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:51:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:52:0: information: Include file: "libavutil/spherical.h" not found. [missingInclude]
+#include "libavutil/spherical.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:53:0: information: Include file: "libavutil/stereo3d.h" not found. [missingInclude]
+#include "libavutil/stereo3d.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:54:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:55:0: information: Include file: "libavutil/intreadwrite.h" not found. [missingInclude]
+#include "libavutil/intreadwrite.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:56:0: information: Include file: "libavutil/libm.h" not found. [missingInclude]
+#include "libavutil/libm.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:57:0: information: Include file: "libavutil/parseutils.h" not found. [missingInclude]
+#include "libavutil/parseutils.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:58:0: information: Include file: "libavutil/timecode.h" not found. [missingInclude]
+#include "libavutil/timecode.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:59:0: information: Include file: "libavutil/timestamp.h" not found. [missingInclude]
+#include "libavutil/timestamp.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:60:0: information: Include file: "libavdevice/avdevice.h" not found. [missingInclude]
+#include "libavdevice/avdevice.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:61:0: information: Include file: "libavdevice/version.h" not found. [missingInclude]
+#include "libavdevice/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:62:0: information: Include file: "libswscale/swscale.h" not found. [missingInclude]
+#include "libswscale/swscale.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:63:0: information: Include file: "libswscale/version.h" not found. [missingInclude]
+#include "libswscale/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:64:0: information: Include file: "libswresample/swresample.h" not found. [missingInclude]
+#include "libswresample/swresample.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:65:0: information: Include file: "libswresample/version.h" not found. [missingInclude]
+#include "libswresample/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:66:0: information: Include file: "libavfilter/version.h" not found. [missingInclude]
+#include "libavfilter/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:67:0: information: Include file: "textformat/avtextformat.h" not found. [missingInclude]
+#include "textformat/avtextformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_avtextwriters.h:24:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_avtextwriters.h:25:0: information: Include file: "libavformat/avio.h" not found. [missingInclude]
+#include "libavformat/avio.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_avtextwriters.h:26:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:72:0: information: Include file: "libavutil/thread.h" not found. [missingInclude]
+#include "libavutil/thread.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1415:10: style: The scope of the variable 'val_str' can be reduced. [variableScope]
+    char val_str[128];
+         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1722:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i, ret = 0;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1759:10: style: The scope of the variable 'val_str' can be reduced. [variableScope]
+    char val_str[128];
+         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:2712:12: style: The scope of the variable 'n' can be reduced. [variableScope]
+    int i, n;
+           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:380:14: style: Variable 'avc' can be declared as pointer to const [constVariablePointer]
+    AVClass* avc = ptr ? *(AVClass **) ptr : NULL;
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1062:27: style: Variable 'metadata' can be declared as pointer to const [constVariablePointer]
+        AVDynamicHDRPlus *metadata = (AVDynamicHDRPlus *)sd->data;
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1381:31: style: Variable 'metadata' can be declared as pointer to const [constVariablePointer]
+            AVDynamicHDRPlus *metadata = (AVDynamicHDRPlus *)sd->data;
+                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1393:32: style: Variable 'metadata' can be declared as pointer to const [constVariablePointer]
+            AVDynamicHDRVivid *metadata = (AVDynamicHDRVivid *)sd->data;
+                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1398:32: style: Variable 'fgp' can be declared as pointer to const [constVariablePointer]
+            AVFilmGrainParams *fgp = (AVFilmGrainParams *)sd->data;
+                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1504:24: style: Variable 'par' can be declared as pointer to const [constVariablePointer]
+    AVCodecParameters *par = ifile->streams[pkt->stream_index].st->codecpar;
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:1721:22: style: Variable 'fmt_ctx' can be declared as pointer to const [constVariablePointer]
+    AVFormatContext *fmt_ctx = ifile->fmt_ctx;
+                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:2230:80: style: Parameter 'stg' can be declared as pointer to const [constParameterPointer]
+static void print_stream_group_params(AVTextFormatContext *tfc, AVStreamGroup *stg)
+                                                                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:2396:63: style: Parameter 'fmt_ctx' can be declared as pointer to const [constParameterPointer]
+static const AVCodec *get_decoder_for_stream(AVFormatContext *fmt_ctx, AVStream *stream)
+                                                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:380:18: style: Variable 'avc' is assigned a value that is never used. [unreadVariable]
+    AVClass* avc = ptr ? *(AVClass **) ptr : NULL;
+                 ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:384:11: style: Unused variable: new_log_buffer [unusedVariable]
+    void *new_log_buffer;
+          ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c: CONFIG_AVDEVICE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c: HAVE_THREADS...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c: _WIN32...
+17/35 files checked 78% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graph_css.c ...
+18/35 files checked 79% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graph_html.c ...
+19/35 files checked 79% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:26:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:27:0: information: Include file: <stdatomic.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdatomic.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:34:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:35:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:36:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:37:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:38:0: information: Include file: "libavutil/common.h" not found. [missingInclude]
+#include "libavutil/common.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:39:0: information: Include file: "libavfilter/avfilter.h" not found. [missingInclude]
+#include "libavfilter/avfilter.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:40:0: information: Include file: "libavutil/buffer.h" not found. [missingInclude]
+#include "libavutil/buffer.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:41:0: information: Include file: "libavutil/hwcontext.h" not found. [missingInclude]
+#include "libavutil/hwcontext.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.h:24:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.h:25:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.h:26:0: information: Include file: "libavformat/avio.h" not found. [missingInclude]
+#include "libavformat/avio.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.h:27:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.h:28:0: information: Include file: "libavutil/rational.h" not found. [missingInclude]
+#include "libavutil/rational.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.h:29:0: information: Include file: "libavutil/hash.h" not found. [missingInclude]
+#include "libavutil/hash.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.h:24:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.h:26:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.h:28:0: information: Include file: "libavutil/avutil.h" not found. [missingInclude]
+#include "libavutil/avutil.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.h:29:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:163:20: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+    for (i = 0; src[i] && i < dst_size - 1; i++)
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:443:14: style: The scope of the variable 'buf' can be reduced. [variableScope]
+        char buf[256];
+             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:400:28: style: Variable 'device_context' can be declared as pointer to const [constVariablePointer]
+        AVHWDeviceContext *device_context = (AVHWDeviceContext *)filter->hw_device_ctx->data;
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:409:28: style: Variable 'dic_entry' can be declared as pointer to const [constVariablePointer]
+        AVDictionaryEntry *dic_entry;
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:441:28: style: Variable 'dic_entry' can be declared as pointer to const [constVariablePointer]
+        AVDictionaryEntry *dic_entry;
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:594:26: style: Variable 'fc' can be declared as pointer to const [constVariablePointer]
+        AVFormatContext *fc = ifi->ctx;
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c:749:16: style: Variable 'muxer' can be declared as pointer to const [constVariablePointer]
+        Muxer *muxer = (Muxer *)of;
+               ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_graphprint.c: _WIN32...
+20/35 files checked 83% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:21:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:23:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:29:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:30:0: information: Include file: "libavutil/avstring.h" not found. [missingInclude]
+#include "libavutil/avstring.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:31:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:32:0: information: Include file: "libavutil/channel_layout.h" not found. [missingInclude]
+#include "libavutil/channel_layout.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:33:0: information: Include file: "libavutil/cpu.h" not found. [missingInclude]
+#include "libavutil/cpu.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:34:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:35:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:36:0: information: Include file: "libavutil/ffversion.h" not found. [missingInclude]
+#include "libavutil/ffversion.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:37:0: information: Include file: "libavutil/log.h" not found. [missingInclude]
+#include "libavutil/log.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:38:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:39:0: information: Include file: "libavutil/parseutils.h" not found. [missingInclude]
+#include "libavutil/parseutils.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:40:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:41:0: information: Include file: "libavutil/version.h" not found. [missingInclude]
+#include "libavutil/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:43:0: information: Include file: "libavcodec/avcodec.h" not found. [missingInclude]
+#include "libavcodec/avcodec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:44:0: information: Include file: "libavcodec/bsf.h" not found. [missingInclude]
+#include "libavcodec/bsf.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:45:0: information: Include file: "libavcodec/codec.h" not found. [missingInclude]
+#include "libavcodec/codec.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:46:0: information: Include file: "libavcodec/codec_desc.h" not found. [missingInclude]
+#include "libavcodec/codec_desc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:47:0: information: Include file: "libavcodec/version.h" not found. [missingInclude]
+#include "libavcodec/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:49:0: information: Include file: "libavformat/avformat.h" not found. [missingInclude]
+#include "libavformat/avformat.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:50:0: information: Include file: "libavformat/version.h" not found. [missingInclude]
+#include "libavformat/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:52:0: information: Include file: "libavdevice/avdevice.h" not found. [missingInclude]
+#include "libavdevice/avdevice.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:53:0: information: Include file: "libavdevice/version.h" not found. [missingInclude]
+#include "libavdevice/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:55:0: information: Include file: "libavfilter/avfilter.h" not found. [missingInclude]
+#include "libavfilter/avfilter.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:56:0: information: Include file: "libavfilter/version.h" not found. [missingInclude]
+#include "libavfilter/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:58:0: information: Include file: "libswscale/swscale.h" not found. [missingInclude]
+#include "libswscale/swscale.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:59:0: information: Include file: "libswscale/version.h" not found. [missingInclude]
+#include "libswscale/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:61:0: information: Include file: "libswresample/swresample.h" not found. [missingInclude]
+#include "libswresample/swresample.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:62:0: information: Include file: "libswresample/version.h" not found. [missingInclude]
+#include "libswresample/version.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c:206:45: error: There is an unknown macro here somewhere. Configuration is required. If FFMPEG_CONFIGURATION is a macro then please configure it. [unknownMacro]
+    av_log(NULL, level, "%sconfiguration: " FFMPEG_CONFIGURATION "\n", indent);
+                                            ^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: CONFIG_AVDEVICE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: CONFIG_AVFILTER...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: CONFIG_GPL...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: CONFIG_GPLV3...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: CONFIG_LGPLV3...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: CONFIG_NONFREE...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: CONFIG_SWSCALE=0...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_opt_common.c: _WIN32...
+21/35 files checked 88% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:26:0: information: Include file: "config.h" not found. [missingInclude]
+#include "config.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:28:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:35:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:36:0: information: Include file: "libavutil/pixdesc.h" not found. [missingInclude]
+#include "libavutil/pixdesc.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:37:0: information: Include file: "libavutil/dict.h" not found. [missingInclude]
+#include "libavutil/dict.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:38:0: information: Include file: "libavutil/common.h" not found. [missingInclude]
+#include "libavutil/common.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:134:24: style: Variable 'dic_entry' can be declared as pointer to const [constVariablePointer]
+    AVDictionaryEntry *dic_entry;
+                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c:31:0: information: Include file: <zlib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <zlib.h>
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c: CONFIG_RESOURCE_COMPRESSION...
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_resman.c: _WIN32...
+22/35 files checked 88% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:19:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:20:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:22:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:23:0: information: Include file: "libavutil/container_fifo.h" not found. [missingInclude]
+#include "libavutil/container_fifo.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:24:0: information: Include file: "libavutil/channel_layout.h" not found. [missingInclude]
+#include "libavutil/channel_layout.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:25:0: information: Include file: "libavutil/cpu.h" not found. [missingInclude]
+#include "libavutil/cpu.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:26:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:27:0: information: Include file: "libavutil/mathematics.h" not found. [missingInclude]
+#include "libavutil/mathematics.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:28:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:29:0: information: Include file: "libavutil/samplefmt.h" not found. [missingInclude]
+#include "libavutil/samplefmt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:30:0: information: Include file: "libavutil/timestamp.h" not found. [missingInclude]
+#include "libavutil/timestamp.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:628:71: style: inconclusive: Function 'sq_limit_frames' argument 3 names different: declaration 'max_frames' definition 'frames'. [funcArgNamesDifferent]
+void sq_limit_frames(SyncQueue *sq, unsigned int stream_idx, uint64_t frames)
+                                                                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.h:72:31: note: Function 'sq_limit_frames' argument 3 names different: declaration 'max_frames' definition 'frames'.
+                     uint64_t max_frames);
+                              ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:628:71: note: Function 'sq_limit_frames' argument 3 names different: declaration 'max_frames' definition 'frames'.
+void sq_limit_frames(SyncQueue *sq, unsigned int stream_idx, uint64_t frames)
+                                                                      ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:671:26: style: inconclusive: Function 'sq_free' argument 1 names different: declaration 'sq' definition 'psq'. [funcArgNamesDifferent]
+void sq_free(SyncQueue **psq)
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.h:54:32: note: Function 'sq_free' argument 1 names different: declaration 'sq' definition 'psq'.
+void       sq_free(SyncQueue **sq);
+                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:671:26: note: Function 'sq_free' argument 1 names different: declaration 'sq' definition 'psq'.
+void sq_free(SyncQueue **psq)
+                         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:218:30: style: Variable 'st' can be declared as pointer to const [constVariablePointer]
+            SyncQueueStream *st = &sq->streams[i];
+                             ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_sync_queue.c:428:39: style: Parameter 'sq' can be declared as pointer to const [constParameterPointer]
+static int receive_samples(SyncQueue *sq, SyncQueueStream *st,
+                                      ^
+23/35 files checked 90% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:24:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:25:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:27:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:28:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:29:0: information: Include file: "libavutil/base64.h" not found. [missingInclude]
+#include "libavutil/base64.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:30:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:31:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:32:0: information: Include file: "libavutil/hash.h" not found. [missingInclude]
+#include "libavutil/hash.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:33:0: information: Include file: "libavutil/intreadwrite.h" not found. [missingInclude]
+#include "libavutil/intreadwrite.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:34:0: information: Include file: "libavutil/macros.h" not found. [missingInclude]
+#include "libavutil/macros.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:35:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:102:48: style: inconclusive: Function 'avtext_context_close' argument 1 names different: declaration 'tctx' definition 'ptctx'. [funcArgNamesDifferent]
+int avtext_context_close(AVTextFormatContext **ptctx)
+                                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.h:170:48: note: Function 'avtext_context_close' argument 1 names different: declaration 'tctx' definition 'ptctx'.
+int avtext_context_close(AVTextFormatContext **tctx);
+                                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:102:48: note: Function 'avtext_context_close' argument 1 names different: declaration 'tctx' definition 'ptctx'.
+int avtext_context_close(AVTextFormatContext **ptctx)
+                                               ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:79:54: style: Parameter 'prev' can be declared as pointer to const. However it seems that 'textcontext_child_next' is a callback function, if 'prev' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static void *textcontext_child_next(void *obj, void *prev)
+                                                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:92:19: note: You might need to cast the function pointer here
+    .child_next = textcontext_child_next,
+                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:79:54: note: Parameter 'prev' can be declared as pointer to const
+static void *textcontext_child_next(void *obj, void *prev)
+                                                     ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:590:56: style: Parameter 'prev' can be declared as pointer to const. However it seems that 'writercontext_child_next' is a callback function, if 'prev' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static void *writercontext_child_next(void *obj, void *prev)
+                                                       ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:602:19: note: You might need to cast the function pointer here
+    .child_next = writercontext_child_next,
+                  ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_textformat.c:590:56: note: Parameter 'prev' can be declared as pointer to const
+static void *writercontext_child_next(void *obj, void *prev)
+                                                       ^
+24/35 files checked 92% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:24:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:25:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:28:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:29:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:30:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:64:10: style: Variable 'meta_chars' can be declared as const array [constVariable]
+    char meta_chars[] = { sep, '"', '\n', '\r', '\0' };
+         ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:198:21: style: Variable 'compact' can be declared as pointer to const [constVariablePointer]
+    CompactContext *compact = wctx->priv;
+                    ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_compact.c:228:21: style: Variable 'compact' can be declared as pointer to const [constVariablePointer]
+    CompactContext *compact = wctx->priv;
+                    ^
+25/35 files checked 93% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:24:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:25:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:28:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:29:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:59:20: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+    for (i = 0; src[i] && i < dst_size - 1; i++)
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:94:21: style: Variable 'def' can be declared as pointer to const [constVariablePointer]
+    DefaultContext *def = wctx->priv;
+                    ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:111:21: style: Variable 'def' can be declared as pointer to const [constVariablePointer]
+    DefaultContext *def = wctx->priv;
+                    ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_default.c:120:21: style: Variable 'def' can be declared as pointer to const [constVariablePointer]
+    DefaultContext *def = wctx->priv;
+                    ^
+26/35 files checked 94% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:24:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:25:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:28:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:29:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:30:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_flat.c:140:18: style: Variable 'flat' can be declared as pointer to const [constVariablePointer]
+    FlatContext *flat = wctx->priv;
+                 ^
+27/35 files checked 94% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:24:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:25:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:29:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:30:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:91:17: style: Variable 'ini' can be declared as pointer to const [constVariablePointer]
+    INIContext *ini = wctx->priv;
+                ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:36:20: style: struct member 'DefaultContext::class' is never used. [unusedStructMember]
+    const AVClass *class;
+                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:37:9: style: struct member 'DefaultContext::nokey' is never used. [unusedStructMember]
+    int nokey;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:38:9: style: struct member 'DefaultContext::noprint_wrappers' is never used. [unusedStructMember]
+    int noprint_wrappers;
+        ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_ini.c:39:9: style: struct member 'DefaultContext::nested_section' is never used. [unusedStructMember]
+    int nested_section[SECTION_MAX_NB_LEVELS];
+        ^
+28/35 files checked 94% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:24:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:25:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:28:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:29:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_json.c:74:15: style: Variable 's' can be declared as pointer to const [constVariablePointer]
+        char *s = strchr(json_escape, *p);
+              ^
+29/35 files checked 95% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:23:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:24:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:25:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:30:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:31:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:32:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:209:13: style: Condition 'ret<0' is always false [knownConditionTrueFalse]
+    if (ret < 0)
+            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:207:27: note: Calling function 'mermaid_init' returns 0
+    int ret = mermaid_init(tfc);
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:207:27: note: Assignment 'ret=mermaid_init(tfc)', assigned value is 0
+    int ret = mermaid_init(tfc);
+                          ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:209:13: note: Condition 'ret<0' is always false
+    if (ret < 0)
+            ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_mermaid.c:284:19: style: Variable 'token_pos' can be declared as pointer to const [constVariablePointer]
+            char *token_pos = av_stristr(mmc->diagram_config->html_template, "__###__");
+                  ^
+30/35 files checked 97% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_xml.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_xml.c:21:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_xml.c:22:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_xml.c:25:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_xml.c:26:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tf_xml.c:27:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+31/35 files checked 98% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:19:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:20:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:22:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:23:0: information: Include file: "libavutil/container_fifo.h" not found. [missingInclude]
+#include "libavutil/container_fifo.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:24:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:25:0: information: Include file: "libavutil/fifo.h" not found. [missingInclude]
+#include "libavutil/fifo.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:26:0: information: Include file: "libavutil/frame.h" not found. [missingInclude]
+#include "libavutil/frame.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:27:0: information: Include file: "libavutil/intreadwrite.h" not found. [missingInclude]
+#include "libavutil/intreadwrite.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:28:0: information: Include file: "libavutil/mem.h" not found. [missingInclude]
+#include "libavutil/mem.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:29:0: information: Include file: "libavutil/thread.h" not found. [missingInclude]
+#include "libavutil/thread.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:31:0: information: Include file: "libavcodec/packet.h" not found. [missingInclude]
+#include "libavcodec/packet.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:54:28: style: inconclusive: Function 'tq_free' argument 1 names different: declaration 'tq' definition 'ptq'. [funcArgNamesDifferent]
+void tq_free(ThreadQueue **ptq)
+                           ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.h:41:36: note: Function 'tq_free' argument 1 names different: declaration 'tq' definition 'ptq'.
+void         tq_free(ThreadQueue **tq);
+                                   ^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_thread_queue.c:54:28: note: Function 'tq_free' argument 1 names different: declaration 'tq' definition 'ptq'.
+void tq_free(ThreadQueue **ptq)
+                           ^
+32/35 files checked 99% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_avio.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_avio.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_avio.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_avio.c:23:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_avio.c:26:0: information: Include file: "libavutil/avassert.h" not found. [missingInclude]
+#include "libavutil/avassert.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_avio.c:28:0: information: Include file: "libavutil/error.h" not found. [missingInclude]
+#include "libavutil/error.h"
+^
+33/35 files checked 99% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_buffer.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_buffer.c:21:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_buffer.c:22:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_buffer.c:25:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_buffer.c:26:0: information: Include file: "libavutil/bprint.h" not found. [missingInclude]
+#include "libavutil/bprint.h"
+^
+34/35 files checked 99% done
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_stdout.c ...
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_stdout.c:21:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_stdout.c:22:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_stdout.c:23:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_stdout.c:27:0: information: Include file: "libavutil/log.h" not found. [missingInclude]
+#include "libavutil/log.h"
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_stdout.c:28:0: information: Include file: "libavutil/opt.h" not found. [missingInclude]
+#include "libavutil/opt.h"
+^
+Checking /mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_stdout.c: _WIN32...
+35/35 files checked 100% done
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c:40:0: style: The function 'posix_memalign' is never used. [unusedFunction]
+int posix_memalign(void** memptr, size_t alignment, size_t size) {
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c:63:0: style: The function 'log2f' is never used. [unusedFunction]
+float log2f(float x) {
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:225:0: style: The function 'mutexUnInit' is never used. [unusedFunction]
+void mutexUnInit() {
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:229:0: style: The function 'monitorUnInit' is never used. [unusedFunction]
+void monitorUnInit() {
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:421:0: style: The function 'cancelRequested' is never used. [unusedFunction]
+int cancelRequested(long id) {
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:623:0: style: The function 'av_get_saf_open' is never used. [unusedFunction]
+saf_open_function av_get_saf_open(void) { return saf_open_cb; }
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:624:0: style: The function 'av_get_saf_close' is never used. [unusedFunction]
+saf_close_function av_get_saf_close(void) { return saf_close_cb; }
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/ffmpegkit.c:626:0: style: The function 'JNI_OnLoad' is never used. [unusedFunction]
+jint JNI_OnLoad(JavaVM *vm, void *reserved) {
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:70:0: style: The function 'log_callback_help' is never used. [unusedFunction]
+void log_callback_help(void *ptr, int level, const char *fmt, va_list vl)
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_cmdutils.c:1616:0: style: The function 'dump_dictionary' is never used. [unusedFunction]
+void dump_dictionary(void *ctx, const AVDictionary *m,
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg.c:499:0: style: The function 'packet_data_c' is never used. [unusedFunction]
+const FrameData *packet_data_c(AVPacket *pkt)
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:306:0: style: The function 'opt_match_per_stream_group_int64' is never used. [unusedFunction]
+OPT_MATCH_PER_STREAM_GROUP(int64, int64_t,      OPT_TYPE_INT64,  i64);
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:307:0: style: The function 'opt_match_per_stream_group_dbl' is never used. [unusedFunction]
+OPT_MATCH_PER_STREAM_GROUP(dbl,   double,       OPT_TYPE_DOUBLE, dbl);
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffmpeg_opt.c:1307:0: style: The function 'show_help_default' is never used. [unusedFunction]
+void show_help_default(const char *opt, const char *arg)
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_ffprobe.c:2913:0: style: The function 'show_help_default_ffprobe' is never used. [unusedFunction]
+void show_help_default_ffprobe(const char *opt, const char *arg)
+^
+/mnt/d/nili/3rd_party_projects/ffmpeg-kit/android/ffmpeg-kit-android-lib/src/main/cpp/fftools_tw_avio.c:108:0: style: The function 'avtextwriter_create_avio' is never used. [unusedFunction]
+int avtextwriter_create_avio(AVTextWriterContext **pwctx, AVIOContext *avio_ctx, int close_on_uninit)
+^
+nofile:0:0: information: Active checkers: There was critical errors (use --checkers-report=<filename> to see details) [checkersReport]
+
