@@ -7,8 +7,11 @@ Custom build of FFmpegKit based on FFmpeg 8.1 with full GPL libraries and MediaC
 - FFmpeg 8.1 (full-gpl)
 - External libraries: x264, x265, lame (mp3lame)
 - Android MediaCodec hardware encoding/decoding: h264, hevc
+- **Critical stability fix: resolved native SIGSEGV crash in JNI layer** — fixed global state pollution causing segment fault on repeated `ffmpeg_execute()` calls
 - Target: Android arm64-v8a, API 24+
 - Output: AAR package with JNI bridge
+
+> **Stability Note:** This fork fixes a critical segment fault (SIGSEGV) in the native JNI/C layer that occurred when calling `ffmpeg_execute()` multiple times. The root cause was FFmpeg's original design as a single-run command-line tool — it relies heavily on global variables and static state. When wrapped as a library via JNI, these global states (e.g., array counters like `nb_input_files`) were not properly reset between executions, leading to crashes, memory leaks, and state pollution. The fix involved properly resetting global array counters in `ffmpeg_cleanup()` (see `fftools_ffmpeg.c`). This was a particularly nasty bug to track down due to its location at the Java/Native boundary, and its resolution significantly improves runtime reliability for production use.
 
 ## Build Scripts
 
