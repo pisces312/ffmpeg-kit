@@ -258,17 +258,22 @@ FFmpeg 加它是为了修 **Android 15（API 35）起的 MediaCodec 问题**。�
 ```bash
 # 1) 只出报告
 python3 build_scripts/port_fftools.py \
-  --new  /mnt/d/3rd-party-projects/ffmpeg-8.1.3/fftools \
-  --base /mnt/d/3rd-party-projects/ffmpeg-8.1/fftools
+  --new  /mnt/d/3rd-party-projects/ffmpeg-<新版>/fftools \
+  --base /mnt/d/3rd-party-projects/ffmpeg-<旧版>/fftools
 
 # 2) 确认后写盘
 python3 build_scripts/port_fftools.py --new ... --base ... --apply
 ```
 
+> `--base` 指向**上一版发布源码**。旧的 `ffmpeg-8.1` 目录已于 2026-10-31 删除（它是单提交快照、混入构建产物），
+> 需要时从 `https://ffmpeg.org/releases/ffmpeg-<ver>.tar.xz` 现解一份到 `D:\3rd-party-projects\`。
+
 - 三方定义：**ours = 本地 `fftools_*` 拷贝**，base = 旧版上游，theirs = 新版上游
 - 本地无改动的文件直接跟随上游；有改动的走 `git merge-file --diff3`，冲突留标记
 - 脚本同时做 flatten（加 `fftools_` 前缀）与 15 个头文件的 include 改名
 - **`compat/android/*` 不在脚本管辖范围**，需在上游结构变化时手工确认
+- ⚠️ **`compat/android/binder.c` 每次升级都要重新删掉 `ABinderProcess_setThreadPoolMaxThreadCount(1)`**
+  （详见 §6 的"第二轮"与 `ffmpeg-build.md` §3.8）。新版源码覆盖该文件后补丁必丢，漏了就是 App 内必崩
 
 ---
 

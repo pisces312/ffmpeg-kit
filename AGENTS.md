@@ -69,8 +69,8 @@
 | Windows | WSL | 说明 |
 |---|---|---|
 | `D:\3rd-party-projects\ffmpeg-kit` | `/mnt/d/3rd-party-projects/ffmpeg-kit` | **本仓库** |
-| `D:\3rd-party-projects\ffmpeg-8.1` | `/mnt/d/3rd-party-projects/ffmpeg-8.1` | FFmpeg 8.1 源码（**单提交快照**，非上游 git 仓库，另有软链 `~/ffmpeg-8.1` 指向它） |
-| （规划中）`D:\3rd-party-projects\ffmpeg-8.1.3` | `/mnt/d/3rd-party-projects/ffmpeg-8.1.3` | 8.1.3 源码（tarball 解压，保留 8.1 作回退源） |
+| `D:\3rd-party-projects\ffmpeg-8.1.3` | `/mnt/d/3rd-party-projects/ffmpeg-8.1.3` | **当前 FFmpeg 源码**（官方 tarball 解压，非 git 仓库）；`src/ffmpeg` 是指向它的相对软链 |
+| `D:\3rd-party-projects\ffmpeg-8.1` | —— | **已于 2026-10-31 删除**（单提交快照、混入构建产物，不适合当升级基线）；需要时从 ffmpeg.org 重新下载 |
 | `D:\my-projects\StreamClip` | `/mnt/d/my-projects/StreamClip` | 消费方 App |
 
 > 仓库根目录在脚本里**已改为自动推导**（`BASH_SOURCE`），不再写死。历史上的 `/mnt/d/nili/3rd_party_projects/...` 是废弃路径。
@@ -79,13 +79,15 @@
 
 | 组件 | 位置 | 版本 |
 |---|---|---|
-| FFmpeg | `src/ffmpeg`（软链或链接到 `$FFMPEG_SRC`） | n8.1 → 目标 n8.1.3 |
-| x264 | `src/x264` | stable @ `eaa68fa`（2023-01-28），`X264_BUILD 164` |
-| x265 | `src/x265` | master @ `7b3d1f5`（2026-05-04），`X265_BUILD 216`（= 4.2） |
-| lame | `src/lame` | 3.100 → 目标 **4.0** |
+| FFmpeg | `src/ffmpeg`（相对软链 `../../ffmpeg-8.1.3`） | **n8.1.3** |
+| x264 | `src/x264` | stable @ `eaa68fa`（2023-01-28），`X264_BUILD 164`，仓库 `github.com/arthenica/x264` |
+| x265 | `src/x265` | master @ `b81f650`（2026-06-23），`X265_BUILD 216`（= 4.2） |
+| lame | `src/lame`（备份 `src/lame-3.100-backup`） | **4.0** |
 | cpu-features | `src/cpu-features` | NDK compat 库 |
 
-`src/` 共约 370 MB，**未纳入版本库**（见 `.gitignore`）。
+**只有在 `src/` 下的这些副本参与编译**，`D:\3rd-party-projects\` 顶层没有 x264/x265 目录
+（2026-10-31 清理了 videolan/x264 master 与 x265 原始克隆两份冗余，见 `docs/ffmpeg-build.md` §3.2.0）。
+`src/` 共约 320 MB，**未纳入版本库**（见 `.gitignore`）。
 
 ---
 
@@ -133,10 +135,11 @@ cd /mnt/d/3rd-party-projects/ffmpeg-kit
 ### 4.4 fftools 移植（升级 FFmpeg 版本时）
 
 ```bash
-# 先只出报告（不写盘）
+# 先只出报告（不写盘）。--base 指向上一版发布源码：
+# 旧的 ffmpeg-8.1 目录已于 2026-10-31 删除，需要时从 ffmpeg.org 现解一份
 python3 build_scripts/port_fftools.py \
   --new  /mnt/d/3rd-party-projects/ffmpeg-8.1.3/fftools \
-  --base /mnt/d/3rd-party-projects/ffmpeg-8.1/fftools
+  --base /mnt/d/3rd-party-projects/ffmpeg-<旧版>/fftools
 
 # 确认后写盘
 python3 build_scripts/port_fftools.py --new ... --base ... --apply
@@ -145,6 +148,7 @@ python3 build_scripts/port_fftools.py --new ... --base ... --apply
 三方合并的三方是：**ours = 本地 `fftools_*` 拷贝**，base = 旧版上游，theirs = 新版上游。
 纯 flatten 变更直接跟随上游；含本地改造的走 `git merge-file --diff3`，冲突会留标记。
 2026-10-31 实测 n8.1→n8.1.3：43 个文件、14 个需处理、**0 冲突**。
+⚠️ `compat/android/*` 不归这个脚本管，升级后要手工重删 `setThreadPoolMaxThreadCount`（见 §5 第 4 条）。
 
 ---
 
@@ -165,10 +169,14 @@ python3 build_scripts/port_fftools.py --new ... --base ... --apply
    `fftools_ffmpeg.c` 里 `#if CONFIG_MEDIACODEC` 包着的 binder 初始化从未被编译进来。
    **修正 config.h 后 JNI 链接会立刻报 `android_binder_threadpool_init_if_required` 未定义，属预期。**
 
-4. **`compat/android/binder.c` 必须单独编进 JNI**
+4. **`compat/android/binder.c` 必须单独编进 JNI，且必须删掉 `setThreadPoolMaxThreadCount`**
    FFmpeg 的 `compat_objs` 只进可执行文件（我们 `--disable-programs`），不进任何 `libav*.so`。
    `cpp/compat/android/` 是上游镜像，`Android.mk` 的 `MY_SRC_FILES` 必须包含 `compat/android/binder.c`。
    该目录**不受 `port_fftools.py` 管辖**，上游结构变化时需手工同步。
+   ⚠️ 同时必须删掉 `ABinderProcess_setThreadPoolMaxThreadCount(1)`，只留幂等的 `ABinderProcess_startThreadPool()`：
+   FFmpeg **8.1 起就有**这段，App 进程里 binder 池已由框架启动、上限更高，传 1 = 缩容 →
+   `LOG_ALWAYS_FATAL "Binder threadpool cannot be shrunk after starting"` → 每次压缩必 SIGABRT。
+   换源码树时该文件会被覆盖，删除和注释都会丢，**升级后按 `docs/ffmpeg-build.md` §3.8 逐条复核**。
 
 5. **`.pc` 文件的 `prefix=` 必须与真实路径一致**
    `pkgconfig/*.pc` 里若残留 `/mnt/d/nili/...`，`configure` 会把 `-I/-L` 指到空目录并报 `x264 not found`。
@@ -222,14 +230,14 @@ python3 build_scripts/port_fftools.py --new ... --base ... --apply
 
 ## 7. 当前状态
 
-- **已完成：FFmpeg n8.1 → n8.1.3 重建**（2026-10-31）
-  - AAR `12,605,392 B`（基线 12,625,191 B，−0.16%）；`versionCode 240813` / `versionName "8.1.3"`
+- **已完成：FFmpeg n8.1 → n8.1.3 重建**（2026-10-31，commit `56b1389`）
+  - AAR `12,605,249 B`（基线 12,625,191 B，−0.16%）；`versionCode 240813` / `versionName "8.1.3"`
   - 同批升级 x265 master `b81f650`、lame 4.0
-  - StreamClip 已切到 `libs/ffmpeg-kit-8.1.3.aar`，`:app:compileDebugKotlin` 通过
-  - **真机 10 项回归未跑**（见 `docs/ffmpeg-8.1.3-rebuild-plan.md` §5）
-- `main` @ `6635c31`；`ffmpeg-8.1` 分支 @ `4b944e0`（历史基线，含 MediaCodec 硬编首次提交）
-- 已知未决：`AudioEncoder.kt:199` 用 `-c:a libopus` 但未编 libopus → 该导出选项必然失败（见重建方案 D1）
-- 回退：AAR 侧改回 `libs/ffmpeg-kit-8.1.aar`；库侧 `mv prebuilt/android-arm64-8.1-backup prebuilt/android-arm64`
+  - StreamClip 已切到 `libs/ffmpeg-kit-8.1.3.aar`（旧 `8.1.aar` 已从仓库移除，可从 `ef0d2dc` 取回）
+  - **真机已验证**：4K HDR `hevc_mediacodec` 硬编 1740 帧、ffprobe 元信息 JSON；binder 崩溃已修（§5 第 4 条）
+- `main` @ `56b1389`；`ffmpeg-8.1` 分支 @ `4b944e0`（历史基线，含 MediaCodec 硬编首次提交）
+- libopus 缺口已决策（B 方案，不重编；StreamClip 侧用内置 `opus`），见 `docs/ffmpeg-build.md` §5.2
+- 回退：`mv prebuilt/android-arm64-8.1-backup prebuilt/android-arm64` + 重新 `build-jni` / `build-aar`
 
 ---
 

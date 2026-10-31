@@ -9,7 +9,7 @@
 
 用法：
   ./port_fftools.py --new /mnt/d/3rd-party-projects/ffmpeg-8.1.3/fftools \\
-                    --base /mnt/d/3rd-party-projects/ffmpeg-8.1/fftools \\
+                    --base /mnt/d/3rd-party-projects/ffmpeg-<旧版>/fftools \\
                     [--cpp <目标目录>] [--apply]
 
   不加 --apply：只输出差异报告（默认，安全）

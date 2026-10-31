@@ -3,7 +3,7 @@
 > **本文是 FFmpeg 构建相关的唯一事实来源**：覆盖两条构建轨道（JNI AAR / CLI 二进制）、全部编译参数、外部依赖库版本、编码器取舍、历史演进与踩坑记录。
 > 原先分散在 `ffmpeg-kit/docs/`（6 份）、`D:\workspace`（6 份）、`StreamClip/docs`（1 份）的 13 份构建文档已合并至此并删除（归档备份：`/tmp/ffmpeg-build-docs-merged-20261031.tar.gz`）。
 > 本文档自 2026-10-31 起归属 **ffmpeg-kit fork 仓库**（`D:\3rd-party-projects\ffmpeg-kit\docs\`），因为它描述的是本仓库的构建行为，与具体 App 解耦。
-> 最后更新：2026-10-31　对应产物：`ffmpeg-kit-8.1.aar`（FFmpeg n8.1）；下一版 `ffmpeg-kit-8.1.3.aar` 见 [ffmpeg-8.1.3-rebuild-plan.md](ffmpeg-8.1.3-rebuild-plan.md)
+> 最后更新：2026-10-31（n8.1.3 重建完成）　当前产物：`ffmpeg-kit-8.1.3.aar`（FFmpeg n8.1.3，12,605,249 B）；上一版 `ffmpeg-kit-8.1.aar`（n8.1，12,625,191 B）已从 StreamClip 仓库移除，可从 commit `ef0d2dc` 取回
 
 ---
 
@@ -11,7 +11,7 @@
 
 | 目的 | 章节 |
 |---|---|
-| 换 FFmpeg 版本、重编 AAR | §3、§8 |
+| 换 FFmpeg 版本、重编 AAR | **§3.8（先看必查清单）**、§3、§8 |
 | 查外部库（x264/x265/lame/fdk-aac）版本与升级 | §3.2.1 |
 | 改编码器 / 加减组件 | §5、§3.3 |
 | 确认某个音频格式是否支持（FLAC/APE/AAC…） | §5.2 |
@@ -26,7 +26,7 @@
 
 | | **A. ffmpeg-kit AAR（主力）** | **B. BinaryFFmpeg（备用）** |
 |---|---|---|
-| 产物 | `ffmpeg-kit-8.1.aar`（12,625,191 B，10 个 `.so`） | `ffmpeg` / `ffprobe` 静态可执行（精简 8.8 MB / 全量 15.2 MB） |
+| 产物 | `ffmpeg-kit-8.1.3.aar`（12,605,249 B，10 个 `.so`） | `ffmpeg` / `ffprobe` 静态可执行（精简 8.8 MB / 全量 15.2 MB） |
 | 调用方式 | Java API `FFmpegKit.executeAsync()`，JNI 进 `libffmpegkit.so` | assets 释放到私有目录 + `Runtime.exec()` |
 | FFmpeg 构建形态 | **共享库**（`--enable-shared --disable-static --disable-programs`） | **静态可执行**（`--enable-static --disable-shared`） |
 | 进度/取消 | `StatisticsCallback` + `FFmpegKit.cancel(sessionId)`，原生支持 | 正则抓 stdout 的 `time=`，取消靠杀进程 |
@@ -45,13 +45,13 @@
 | NDK | `/home/pisces312/android-ndk-r27d`（27.3.13750724） | Linux 版；轨道 A/B 统一使用（轨道 B 历史上用过 r25b，2026-10-31 合并脚本时统一到 r27d） |
 | API level | 24（Android 7.0） | `aarch64-linux-android24-clang` |
 | ABI | 仅 `arm64-v8a` | 32 位 ARM 与 x86 全部禁用 |
-| FFmpeg 源码 | `D:\3rd-party-projects\ffmpeg-8.1`（WSL 内 `/mnt/d/3rd-party-projects/ffmpeg-8.1`） | 有软链 `/home/pisces312/ffmpeg-8.1` → 同一目录 |
+| FFmpeg 源码 | **`D:\3rd-party-projects\ffmpeg-8.1.3`**（WSL `/mnt/d/3rd-party-projects/ffmpeg-8.1.3`） | 官方 tarball 解压，非 git 仓库；`ffmpeg-kit/src/ffmpeg` 是指向它的相对软链。旧的 `ffmpeg-8.1` 已于 2026-10-31 删除（它是单提交快照，需要时从 ffmpeg.org 重新下载） |
 | ffmpeg-kit 工程 | `D:\3rd-party-projects\ffmpeg-kit` | fork `pisces312/ffmpeg-kit` |
-| 外部库源码 | `ffmpeg-kit/src/{x264,x265,lame,cpu-features}` | 370 MB，未纳入版本库 |
+| 外部库源码 | `ffmpeg-kit/src/{x264,x265,lame,cpu-features}` | 见 §3.2.0；约 320 MB，未纳入版本库（`src/*` 已 ignore） |
 | Android SDK | Windows 侧（WSL 挂载） | Gradle 打包走 `cmd.exe /c gradlew.bat`，因为 build-tools 是 Windows 二进制 |
 | JDK | Windows JBR 21（Gradle 用）；WSL 内 JDK 仅供 shell 工具 | 6.0 时代需 JDK 17（Gradle 8.2.1 不支持 21） |
 
-**路径坑**：三个构建脚本里的 `BASEDIR` 仍是旧路径 `/mnt/d/nili/3rd_party_projects/ffmpeg-kit`，实际仓库已迁到 `/mnt/d/3rd-party-projects/ffmpeg-kit`。每次重建前先确认（见 §8.3）。
+**路径约定（2026-10-31 已固化）**：所有脚本的 `BASEDIR` 改为 `$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)`，`pkgconfig/*.pc` 的 `prefix=` 也同步为 `/mnt/d/3rd-party-projects/ffmpeg-kit`。历史上写死的 `/mnt/d/nili/3rd_party_projects/...` 是废弃路径，`pkg-config` 命中它时只会得到空 `-I/-L`，表现为 `x264 not found`。重建前仍建议按 §8.3 抽查一次。
 
 ---
 
@@ -68,6 +68,21 @@
 脚本约定：外部库与 FFmpeg 都有"存在即跳过"的短路，`FORCE_FFMPEG=1` 强制重编 FFmpeg；`--debug` 参数（步 2/3）保留符号表、跳过 strip，用于 native 崩溃定位。
 
 ### 3.2 外部库
+
+#### 3.2.0 源码在哪（构建真正读取的路径）
+
+**有效副本只有 `ffmpeg-kit/src/` 下这一份**，`D:\3rd-party-projects\` 顶层没有 x264/x265 目录（2026-10-31 清理掉了两份冗余克隆，见 §7 #27）。
+
+| 库 | 构建读取路径 | 仓库来源 | 版本 |
+|---|---|---|---|
+| x264 | `ffmpeg-kit/src/x264`（12 MB） | **`github.com/arthenica/x264`**（arthenica fork，不是 videolan 主干） | stable @ `eaa68fa`（2023-01-28），`X264_BUILD 164` |
+| x265 | `ffmpeg-kit/src/x265`（154 MB，含构建产物） | `bitbucket.org/multicoreware/x265_git` | master @ `b81f650`（2026-06-23），`X265_BUILD 216` = 4.2 |
+| lame | `ffmpeg-kit/src/lame`（另有 `src/lame-3.100-backup` 回退） | SourceForge lame 4.0 | 4.0 |
+| FFmpeg | `ffmpeg-kit/src/ffmpeg` → 相对软链 `../../ffmpeg-8.1.3` | ffmpeg.org n8.1.3 源码包 | n8.1.3 |
+
+证据在脚本里：`build-ffmpeg-ndk-27d.sh` 用 `cd $BASEDIR/src/x264`、`cd $BASEDIR/src/x265/source`，
+`FFMPEG_SRC` 默认 `/mnt/d/3rd-party-projects/ffmpeg-8.1.3`。
+**换版本 = 直接替换 `src/` 下对应目录**，不要在别处另放一份源码树（两份副本极易编到旧的那份）。
 
 当前产物（**2026-10-31 构建，FFmpeg n8.1.3**）使用的版本：
 
@@ -86,8 +101,8 @@
 | 库 | 本地产物 | 上游最新 | 差距 | 升级价值 |
 |---|---|---|---|---|
 | **x264** | stable @ `eaa68fa`（2023-01-28，BUILD 164） | master @ `c24e06c`（2024-09-17） | 本地落后 master 约 1.6 年；**上游距今天已 2 年零提交** | **很低**。上游实质上已停更；master 增量集中在 LoongArch/checkasm/x86inc 与 MS armasm64 的 SVE 检测，对 arm64 Android 无实际收益 |
-| **x265** | master @ `7b3d1f5`（2026-05-04，BUILD 216） | master @ `b81f650`（2026-06-23） | 约 50 天 / 59 提交（含 4.2 tag 后的全部提交） | **低**。其中 `d0137d63 fix: scenecut not active when bframes=0` 与本项目 `-x265-params` 可能相关，其余为 LoongArch/PowerPC 优化 |
-| **lame** | 3.100（2017-10） | **4.0**（2026-07-11） | **大版本** | **高**。4.0 集中修安全缺陷：AIFF/AIFC `FORM` chunk 尺寸下溢（CVSS 5.5，可致无界自旋 DoS）、`fill_buffer_resample` 边界、以及若干 fuzz 修复。API 完全兼容（`lame_set_VBR_quality` 等签名未变） |
+| **x265** | **master @ `b81f650`（2026-06-23，BUILD 216）→ 已升级到该版** | master @ `b81f650` | 0 | 已升级（2026-10-31），差 59 提交，其中 `d0137d63 fix: scenecut not active when bframes=0` 与 `-x265-params` 相关 |
+| **lame** | **4.0 → 已升级** | **4.0**（2026-07-11） | 0 | 已升级（2026-10-31）。4.0 集中修安全缺陷：AIFF/AIFC `FORM` chunk 尺寸下溢（CVSS 5.5，可致无界自旋 DoS）、`fill_buffer_resample` 边界、以及若干 fuzz 修复。API 完全兼容（`lame_set_VBR_quality` 等签名未变） |
 | **fdk-aac** | 未引入 | **3.0.0**（2026-10-11） | — | **可选**。见 §5.2 与 §3.2.2 |
 
 #### 3.2.2 升级到新版本时的构建差异
@@ -223,6 +238,30 @@ python3 build_scripts/port_fftools.py --new <新版>/fftools --base <旧版>/fft
 - **Gradle 必须用 JDK 17**：宿主 `JAVA_HOME` 是 `D:\dev\jdk-25`，Gradle 8.10.2 的 Groovy 解析不了 Java 25 字节码（`Unsupported class file major version 69`）。已在 `android/gradle.properties` 固定 `org.gradle.java.home=D:/dev/jdk-17.0.2`
 - 接入 StreamClip：`app/build.gradle.kts` 的 `implementation(files("libs/ffmpeg-kit-8.1.3.aar"))`
 
+### 3.8 升级 FFmpeg 后必须重做的本地补丁（checklist）
+
+> ⚠️ **换 FFmpeg 版本的必查项。**
+> **上游 `compat/android/binder.c` 里的 `ABinderProcess_setThreadPoolMaxThreadCount(1)` 每次升级都要重新删掉**，
+> 否则 App 内第一次执行 ffmpeg 就 `SIGABRT`（`Binder threadpool cannot be shrunk after starting`，见 §7 #20）。
+> 这不是 8.1.3 才有的代码——FFmpeg **8.1 就有**，只是我们过去没把它编进 JNI，所以没暴露。
+> 换源码树后 `compat/android/binder.c` 会被新文件覆盖，注释和删除都会丢，必须按本表逐条复核。
+
+| # | 项 | 检查命令 | 期望 |
+|---|---|---|---|
+| 1 | 已删除 `setThreadPoolMaxThreadCount` 调用 | `grep -n setThreadPoolMaxThreadCount android/ffmpeg-kit-android-lib/src/main/cpp/compat/android/binder.c` | **只命中注释**，没有 `dlsym`/函数指针调用 |
+| 2 | 编译产物里也没有 | `strings android/libs/arm64-v8a/libffmpegkit.so \| grep -c ABinderProcess_setThreadPoolMaxThreadCount` | `0` |
+| 3 | `startThreadPool` 保留 | 同上，`grep -c ABinderProcess_startThreadPool` | `1` |
+| 4 | 两份 `binder.c` 只差一行 | `diff $FFMPEG_SRC/compat/android/binder.c .../cpp/compat/android/binder.c` | 唯一差异是 `#include <android/api-level.h>`（`-Werror` 需要） |
+| 5 | `MY_SRC_FILES` 含 compat | `grep -c compat/android/binder.c android/jni/Android.mk` | `1` |
+| 6 | fftools 三方合并 | `port_fftools.py --new … --base …` | 0 冲突；有冲突必须逐个看 |
+| 7 | `ffmpeg_cleanup()` 计数器复位 | `grep -c "nb_.* = 0" .../fftools_ffmpeg.c` | ≥ 5（连续执行不崩的关键） |
+| 8 | 输出通道仍是 `av_log` | `grep -cE "[^a-z]printf\(" .../fftools_opt_common.c` | `0` |
+| 9 | `APP_PLATFORM` = 24、`src/ffmpeg` 是软链 | `cat android/jni/Application.mk`；`readlink src/ffmpeg` | `android-24`；`../../ffmpeg-8.1.3` |
+| 10 | 版本号三处一致 | `ffmpegkit.h` / `build.gradle` 的 `versionName`、`versionCode` | `8.1.3` / `240813`（规律见 §3.7） |
+| 11 | AAR 内 `.so` 与源码同代 | `./check-aar-ffmpeg-version.sh <aar>` | `8.1.3` + `LIBAVUTIL_60` |
+
+第 1、2 条是**硬门槛**：只要有一处残留，装到手机上压缩任何视频都会闪退，且崩在 `ffmpeg_execute` 里，看起来像"FFmpeg 本身的问题"。
+
 ---
 
 ## 4. 轨道 B：CLI 二进制
@@ -348,7 +387,7 @@ cd /mnt/d/3rd-party-projects/ffmpeg-kit
 | 3 | 2026-05-10 | 自建 **Binary** 轨道 | 15.2 / 8.8 MB | 静态 `ffmpeg`/`ffprobe`，NDK r25b，先全量后精简 |
 | 4 | 2026-05-13 | 自编 **FFmpeg 8.1 + ffmpeg-kit 8.1** | 12.1 MB | 起因：H.265 硬编 + AAC 时 `libswresample.so` NEON 崩溃 → 补齐 `-march=armv8-a`/`--sysroot` 等参数重编；同轮加 `FORCE_FFMPEG` |
 | 5 | 2026-05-14 | 同上 + SDK r27d | 12.6 MB | 修「同进程二次执行 SIGSEGV」（`ffmpeg_cleanup` 计数器复位）；`build-*-ndk-r27d.sh` 三脚本成型 |
-| 6 | 2026-10-31（计划） | n8.1.3 + 外部库升级 | 待产出 | FFmpeg 8.1 → 8.1.3；同时 lame 3.100→4.0、x265 追平上游 master。见 [ffmpeg-8.1.3-rebuild-plan.md](ffmpeg-8.1.3-rebuild-plan.md) |
+| 6 | 2026-10-31 | n8.1.3 + 外部库升级 | 12.6 MB | FFmpeg 8.1 → 8.1.3；lame 3.100→4.0、x265 追平 master `b81f650`。**首次把 `compat/android/binder.c` 编进 JNI**，引出"App 内必崩"的 `setThreadPoolMaxThreadCount` 回归（§7 #20），现已修 |
 
 ---
 
@@ -375,7 +414,15 @@ cd /mnt/d/3rd-party-projects/ffmpeg-kit
 | 17 | 同进程第二次执行崩溃 | `ffmpeg_cleanup()` 释放数组但不清 `nb_*` 计数 | `fftools_ffmpeg.c` 里补 4 个 `nb_* = 0` |
 | 18 | `-display_rotation` 报 "cannot be applied to output url" | 它是 **输入** 选项（`OPT_INPUT`），必须在 `-i` 之前 | 移到 `-i` 前（另见 `rotation-design.md`） |
 | 19 | AAR 里 `config.h` 与实际 `.so` 的 configure 不一致 | 回填时用错版本（§3.5 隐患） | 回填后 grep 校验 `FFMPEG_CONFIGURATION` |
-| 20 | **App 内每次执行 ffmpeg 都 SIGABRT**：`Abort message: 'Binder threadpool cannot be shrunk after starting'`，栈顶 `setThreadPoolMaxThreadCount` ← `ABinderProcess_setThreadPoolMaxThreadCount` ← `android_binder_threadpool_init_if_required` ← `ffmpeg_execute` | 上游 `compat/android/binder.c` 会调 `ABinderProcess_setThreadPoolMaxThreadCount(1)`；该断言要求 `mThreadPoolStarted` 时上限不得变小。**App 进程里 ART 早已启动 binder 池且上限更高**，传 1 = 缩容 → `LOG_ALWAYS_FATAL`。上游代码面向 ffmpeg 独立可执行文件，嵌入 App 场景不成立。旧 8.1 AAR 没编这段，故无此问题 | 删掉该调用，只保留幂等的 `startThreadPool()`；见 `ffmpeg-modifications.md` #6 |
+| 20 | **App 内每次执行 ffmpeg 都 SIGABRT**：`Abort message: 'Binder threadpool cannot be shrunk after starting'`，栈顶 `setThreadPoolMaxThreadCount` ← `ABinderProcess_setThreadPoolMaxThreadCount` ← `android_binder_threadpool_init_if_required` ← `ffmpeg_execute` | 上游 `compat/android/binder.c` 会调 `ABinderProcess_setThreadPoolMaxThreadCount(1)`；该断言要求 `mThreadPoolStarted` 时上限不得变小。**App 进程里 ART 早已启动 binder 池且上限更高**，传 1 = 缩容 → `LOG_ALWAYS_FATAL`。上游代码面向 ffmpeg 独立可执行文件，嵌入 App 场景不成立。旧 8.1 AAR 没编这段，故无此问题 | 删掉该调用，只保留幂等的 `startThreadPool()`；见 `ffmpeg-modifications.md` #6、§3.8 |
+| 21 | JNI 链接报 `undefined symbol: android_binder_threadpool_init_if_required`（**修好 config.h 同源后才出现**） | FFmpeg 的 `compat_objs` 只链进可执行文件，我们 `--disable-programs` 所以 6 个 `libav*.so` 里都没有；而 `CONFIG_MEDIACODEC=1` 后 `fftools_ffmpeg.c` 会调它 | 把上游 `compat/android/{binder.c,binder.h}` 镜像到 `cpp/compat/android/`，`Android.mk` 的 `MY_SRC_FILES` 追加 |
+| 22 | `-Werror,-Wunused-function`（binder 相关静态函数"未使用"） | `APP_PLATFORM` 仍是 `android-21`，`#if __ANDROID_API__ >= 24` 分支被预处理掉 | `APP_PLATFORM := android-24`；同文件删掉 `-DFFMPEG_KIT_LTS`（会让 `isNativeLTSBuild()` 错报 true） |
+| 23 | Gradle 报 `Unsupported class file major version 69` | 宿主 `JAVA_HOME` 是 JDK 25，Gradle 8.10.2 的 Groovy 解析不了 | `android/gradle.properties` 固定 `org.gradle.java.home=D:/dev/jdk-17.0.2` |
+| 24 | lame 每次都重编（`already built` 判定从不命中） | 跳过判据查 `$PREFIX/lib/pkgconfig/mp3lame.pc`，而 lame 实际生成的是 `lame.pc` | 判据改为 `$PREFIX/lib/libmp3lame.a` |
+| 25 | lame 4.0 `configure: error: no, libmpg123 not found` | 4.0 把 mpg123 从可选依赖改成强制检查 | 加 `--disable-decoder`（只要编码器） |
+| 26 | 在别的目录跑脚本就报 `$BASEDIR 不像 ffmpeg-kit 仓库根` / `x264 not found` | `BASEDIR` 写死旧路径 `/mnt/d/nili/3rd_party_projects/...`，`.pc` 的 `prefix=` 同样过期 | `BASEDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)`；`.pc` 前缀改 `/mnt/d/3rd-party-projects/ffmpeg-kit` |
+| 27 | 想拿 `ffmpeg-8.1` 当升级基线，发现版本对不上 | 那份是**单提交快照**（`git log` 只有 `init`，无 remote/tag），且混入了 `config.h`/`.o` 等构建产物 | 8.1.3 改用官方 tarball 重新解压；今后升级基线一律现下 `ffmpeg-<ver>.tar.xz`，不复用构建树 |
+| 28 | `src/ffmpeg` 占 118 MB 却版本不明 | 是 `cp -r` 出来的僵尸副本，不是软链 | 改为相对软链 `../../ffmpeg-8.1.3`（`port_fftools.py` 与脚本都按 `$FFMPEG_SRC` 取源码） |
 
 ---
 
@@ -391,14 +438,17 @@ cd /mnt/d/3rd-party-projects/ffmpeg-kit
 | **8.x** | **60** | **62** | **62** |
 | 9.x | 61 | 63 | 63 |
 
-当前 AAR 实测：`LIBAVUTIL_60` / `LIBAVCODEC_62` / `LIBAVFORMAT_62` → **FFmpeg 8.1**（早期曾误判为 6.0，实际是 SONAME 对照表记错）。
+当前 AAR 实测：`LIBAVUTIL_60` / `LIBAVCODEC_62` / `LIBAVFORMAT_62` → **FFmpeg 8.x**（8.1 与 8.1.3 的 SONAME 完全相同，靠版本字面量区分，见下一条）。
+
+> **8.1 与 8.1.3 的 `.so` 只差版本串**：`libavutil.so` 内 `8.1` → `8.1.3`，SONAME 节点仍是 `LIBAVUTIL_60`。
+> 所以"是不是新 AAR"不能看 SONAME，要看版本字面量或 configure 里的 `--prefix`（编译路径指纹）。
 
 ### 8.2 产物校验命令
 
 ```bash
-# 版本
-grep FFMPEG_VERSION prebuilt/android-arm64/ffmpeg/include/libavutil/ffversion.h   # "8.1"
-strings prebuilt/android-arm64/ffmpeg/lib/libavutil.so | grep -E '^8\.1(\.[0-9])?$'
+# 版本（注意：strings 默认最小长度是 4，"8.1" 会被直接漏掉，必须显式 -n 3）
+grep FFMPEG_VERSION prebuilt/android-arm64/ffmpeg/include/libavutil/ffversion.h   # "8.1.3"
+strings -n 3 prebuilt/android-arm64/ffmpeg/lib/libavutil.so | grep -E '^8\.1(\.[0-9])?$'
 
 # SONAME / 依赖
 readelf -d prebuilt/android-arm64/ffmpeg/lib/libavutil.so | grep -E 'SONAME|NEEDED'
@@ -410,10 +460,17 @@ strings prebuilt/android-arm64/ffmpeg/lib/libavcodec.so | grep -x libx265       
 # config.h 与库是否同源（§3.5 隐患）
 grep -o 'FFMPEG_CONFIGURATION ".*' prebuilt/android-arm64/ffmpeg/include/config.h | grep -c mediacodec
 
+# binder 补丁是否生效（§3.8 硬门槛）
+strings android/libs/arm64-v8a/libffmpegkit.so | grep -c ABinderProcess_setThreadPoolMaxThreadCount  # 期望 0
+strings android/libs/arm64-v8a/libffmpegkit.so | grep -c ABinderProcess_startThreadPool              # 期望 1
+
 # AAR
-unzip -l app/libs/ffmpeg-kit-8.1.aar | grep '\.so$'      # 期望 10 行
-./check-aar-ffmpeg-version.sh app/libs/ffmpeg-kit-8.1.aar
+unzip -l app/libs/ffmpeg-kit-8.1.3.aar | grep '\.so$'      # 期望 10 行
+./check-aar-ffmpeg-version.sh app/libs/ffmpeg-kit-8.1.3.aar
 ```
+
+> 本机 WSL 若 `strings` 不在 PATH（沙箱裁过 PATH 时会出现），用 `llvm-strings`（NDK 自带）或
+> `grep -a` 代替；`grep -a 'ABinderProcess_setThreadPoolMaxThreadCount' binary` 同样有效。
 
 ### 8.3 重建前自检清单
 
@@ -423,7 +480,14 @@ grep -n "BASEDIR=\|FFMPEG_SRC=" build-*.sh          # 必须是 /mnt/d/3rd-party
 grep -h '^prefix=' prebuilt/android-arm64/ffmpeg/lib/pkgconfig/*.pc   # 同上
 ls prebuilt/android-arm64/cpu-features/lib/libndk_compat.a          # 存在
 ls prebuilt/android-arm64/ffmpeg/include/libavutil/thread.h          # 存在
+readlink src/ffmpeg                                                  # ../../ffmpeg-8.1.3
+# ★ 换了 FFmpeg 源码树之后，这一步必做（详见 §3.8）
+grep -n setThreadPoolMaxThreadCount \
+  android/ffmpeg-kit-android-lib/src/main/cpp/compat/android/binder.c  # 只应命中注释
 ```
+
+> 顺序提醒：**先 AAR 后 CLI**。`build-cli-binary-ndk-r27d.sh` 会 `make distclean`，把轨道 A 的
+> `config.h` 一起清掉，回头再编 AAR 就得重来。
 
 ### 8.4 调试构建
 
@@ -434,14 +498,22 @@ ls prebuilt/android-arm64/ffmpeg/include/libavutil/thread.h          # 存在
 
 ## 9. 待办与优化方向
 
-1. **`libopus` 缺口（已决策，2026-10-31）**：选 **B —— 不重编**，`AudioEncoder.kt` 改用内置实验性 `opus` 编码器，命令模板为 `-ar 48000 -c:a opus -strict -2 -b:a <bps>`。约束见 §5.2 表格。若日后 Opus 变成常用格式，再翻回 A 方案（`src/opus` + `--enable-libopus`）。
-2. **外部依赖库版本**（详见 §3.2.1）：lame 3.100 → **4.0**（安全修复，价值最高）、x265 master → 最新（差异小）、x264 保持 stable（上游已停更，升级无收益）。已并入 [ffmpeg-8.1.3-rebuild-plan.md](ffmpeg-8.1.3-rebuild-plan.md) 的 D2–D4 决策。
-3. **config.h 同源校验**：把 §3.5 的 grep 断言写进 `build-ffmpeg-ndk-27d.sh`，避免再次回填错版本。
-4. **内部头回填脚本化**：并入 `build-ffmpeg-ndk-27d.sh`（已踩两次：2026-05-13、2026-08）。
-5. **体积优化（独立立项）**：`libavcodec.so` 16 MB / AAR 12.6 MB 来自默认全量组件。按 §5.3 结论，裁掉未使用的编码器与协议预计可降 30–40%，需配套自定义命令的可用性回归。
-5. **`fftools_*` 移植脚本化**：45 项映射 + 15 个 include 改名 + 断言集，沉淀为 `build_scripts/port_fftools.py`，把后续升级从"半天人工比对"压到"半小时"。
-6. **`Application.mk` 清理**：仍留着 `-DFFMPEG_KIT_LTS`（LTS 分支早已移除）和 `APP_PLATFORM := android-21`（而 FFmpeg 用 API 24 编），建议统一到 24。
-7. **固定第三方库版本获取方式**：`src/{x264,x265,lame}` 目前是手工放置的源码目录，没有版本清单，已出现"目录里是 x265 4.2、pkg-config 写 3.4"的漂移。建议新增 `scripts/android/versions.conf` 记录"仓库 URL + tag/commit + X264_BUILD/X265_BUILD/lame 版本"，构建时断言。
+**已完成（2026-10-31）**
+
+| 项 | 结果 |
+|---|---|
+| 外部依赖库升级 | lame 3.100 → **4.0**；x265 → master `b81f650`；x264 保持 stable（上游已停更，升级无收益） |
+| 内部头回填脚本化 | `build_scripts/backfill_ffmpeg_headers.sh`，含 5 条同源断言 |
+| fftools 移植脚本化 | `build_scripts/port_fftools.py`，n8.1→n8.1.3 实测 43 文件 / 0 冲突 |
+| `Application.mk` 清理 | `APP_PLATFORM := android-24`；删掉 `-DFFMPEG_KIT_LTS` |
+| `libopus` 缺口 | 决策 **B**：不重编，改用内置 `opus -strict -2` + 强制 48 kHz（详见 §5.2 与 StreamClip `AudioEncoder.kt`） |
+| binder 回归 | 已修（§7 #20），并写成 §3.8 的升级必查项 |
+
+**仍待办**
+
+1. **真机回归未跑满**：安装、4K 硬编、ffprobe 元信息 JSON、help/错误输出、连续执行 10 次不崩 —— 其中压缩与 ffprobe 已在真机验证过，其余项建议随下个版本补测。
+2. **体积优化（独立立项）**：`libavcodec.so` 16 MB / AAR 12.6 MB 来自默认全量组件。按 §5.3 结论，裁掉未使用的编码器与协议预计可降 30–40%，需配套自定义命令的可用性回归。
+3. **第三方库版本清单**：`src/{x264,x265,lame}` 是手工放置的源码目录，没有版本记录，已出现"目录里是 x265 4.2、pkg-config 写 3.4"的漂移。建议加 `scripts/android/versions.conf`（仓库 URL + commit + `X264_BUILD`/`X265_BUILD`），构建时断言。§3.2.0 的表格可作为初始值。
 
 ---
 

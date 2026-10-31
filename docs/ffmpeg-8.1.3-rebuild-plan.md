@@ -1,9 +1,17 @@
 # FFmpeg 8.1.3 重建方案（ffmpeg-kit AAR）
 
+> **状态：已执行完成（2026-10-31）**，本文转为归档记录。
+> 结果：AAR `12,605,249 B` / `FFMPEG_KIT_VERSION "8.1.3"`，commit `56b1389`；执行中遇到 4 个方案未预见的坑
+> （`binder.c` 链接缺口、`APP_PLATFORM` 与 `-Werror`、Gradle 遇上 JDK 25、lame 跳过判据查错文件），
+> 以及 1 个**运行时回归**（`setThreadPoolMaxThreadCount` 在 App 内 SIGABRT），全部已修并回写进
+> [`ffmpeg-build.md`](ffmpeg-build.md) §3.8 与 §7。
+>
+> **下次升级 FFmpeg 时，先看 [`ffmpeg-build.md`](ffmpeg-build.md) §3.8 的必查清单，不要照抄本文。**
+
 > **决策**：采纳 **8.1.3 补丁级升级**，不跳 FFmpeg 9.0。
 > 依据见 StreamClip 仓库的 `docs/ffmpeg9-upgrade-assessment.md`（9.0 对本项目零功能收益，且 movenc 时间基变更带来回归风险；8.1.3 已拿齐 9.0 的 mov 解封装安全加固）。
 > **前置阅读**：[`ffmpeg-build.md`](ffmpeg-build.md) —— 构建总纲（环境基线、完整 configure 参数、外部库版本、编码器取舍、踩坑登记）。本文只写 8.1.3 相对 8.1 的**增量改动**，通用背景不重复。
-> 编写日期：2026-10-31　最后更新：2026-10-31（补充 D2–D5 外部库决策）　适用：`D:\3rd-party-projects\ffmpeg-kit` fork
+> 编写日期：2026-10-31　最后更新：2026-10-31（补 D2–D5 外部库决策；执行完成）　适用：`D:\3rd-party-projects\ffmpeg-kit` fork
 
 ---
 
