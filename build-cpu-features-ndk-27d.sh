@@ -11,7 +11,7 @@ export TARGET=aarch64-linux-android24
 export CC=$TOOLCHAIN/bin/${TARGET}-clang
 export AR=$TOOLCHAIN/bin/llvm-ar
 
-export BASEDIR=/mnt/d/nili/3rd_party_projects/ffmpeg-kit
+export BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 export SRC=$BASEDIR/src/cpu-features
 export OUT=$BASEDIR/prebuilt/android-arm64/cpu-features
 

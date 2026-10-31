@@ -6,3 +6,19 @@ android/.gradle/
 android/local.properties
 *.iml
 .idea/
+
+# 第三方源码（约 258 MB，含 lame 3.100 备份）；FFmpeg 源码在仓库外的 ../ffmpeg-8.1.3
+# 注意：android/ffmpeg-kit-android-lib/build/outputs/aar/*.aar 是**故意跟踪**的交付物，勿忽略
+src/*
+!src/.gitignore
+
+# 回退用的 8.1 预编译库备份（约 43 MB）
+prebuilt/android-arm64-8.1-backup/
+
+# 历史 LTS 实验残留（仅剩一个孤立 .so，无脚本引用）
+prebuilt/android-arm64-lts/
+
+# 轨道 B（CLI 二进制）产出
+out/
+
+*.log

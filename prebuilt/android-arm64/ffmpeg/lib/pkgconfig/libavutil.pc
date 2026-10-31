@@ -1,11 +1,11 @@
-prefix=/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg
+prefix=/mnt/d/3rd-party-projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg
 exec_prefix=${prefix}
-libdir=/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib
-includedir=/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/include
+libdir=/mnt/d/3rd-party-projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib
+includedir=/mnt/d/3rd-party-projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/include
 
 Name: libavutil
 Description: FFmpeg utility library
-Version: 60.26.100
+Version: 60.26.103
 Requires: 
 Requires.private: 
 Conflicts:

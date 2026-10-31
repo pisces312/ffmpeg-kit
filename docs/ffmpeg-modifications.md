@@ -163,12 +163,122 @@ After the fix: 0 `printf()` calls remaining, 108 `av_log()` calls (including the
 
 ---
 
+## Modification #6: 补编 `compat/android/binder.c`（FFmpeg 8.1.3 起必需）
+
+### Problem
+
+`fftools_ffmpeg.c` 里有一段：
+
+```c
+#if CONFIG_MEDIACODEC
+    android_binder_threadpool_init_if_required();
+#endif
+```
+
+该函数定义在 FFmpeg 的 `compat/android/binder.c`，而 FFmpeg 的 `compat_objs` **不会**进任何 `libav*.so`
+（只进 `ffmpeg`/`ffprobe` 可执行文件，而我们用 `--disable-programs`）。
+
+历史上之所以没暴露：`prebuilt/.../include/config.h` 内嵌的是**精简版二进制**的 configure（含
+`--disable-everything`、无 mediacodec），`CONFIG_MEDIACODEC` 为 0 → 整段被预处理掉。
+
+2026-10-31 修正 config.h 同源问题后，`CONFIG_MEDIACODEC` 变成 1，链接立刻报：
+
+```
+ld.lld: error: undefined symbol: android_binder_threadpool_init_if_required
+>>> referenced by fftools_ffmpeg.c:1076 :(ffmpeg_execute)
+```
+
+### Fix（第一轮：补编）
+
+1. 把上游 `compat/android/{binder.c,binder.h}` **原样镜像**到 `android/ffmpeg-kit-android-lib/src/main/cpp/compat/android/`
+   —— 保留 `#include "compat/android/binder.h"` 的相对路径，`fftools_ffmpeg.c` **零改动**，升级时不会被合并冲掉
+2. 在 `compat/android/binder.c` 补 `#include <android/api-level.h>`
+   —— 上游靠隐式声明使用 `android_get_device_api_level()`，JNI 层用 `-Werror` 编译会直接失败
+3. `android/jni/Android.mk` 的 `MY_SRC_FILES` 追加 `compat/android/binder.c`
+
+### Fix（第二轮：必须改函数体，否则 App 内必崩）
+
+「原样镜像」是错的。真机（Android 17 / API 37）上**每一次 ffmpeg 执行都 SIGABRT**：
+
+```
+Fatal signal 6 (SIGABRT) in tid … (pool-7-thread-1)
+Abort message: 'Binder threadpool cannot be shrunk after starting'
+#04 /system/lib64/libbinder.so     android::ProcessState::setThreadPoolMaxThreadCount(unsigned long)+92
+#05 /system/lib64/libbinder_ndk.so ABinderProcess_setThreadPoolMaxThreadCount+48
+#06 base.apk!libffmpegkit.so       android_binder_threadpool_init_if_required+228
+#07 base.apk!libffmpegkit.so       ffmpeg_execute+304
+```
+
+根因是上游 `android_binder_threadpool_init()` 里的这一句：
+
+```c
+set_thread_pool_max(THREAD_POOL_SIZE /* = 1 */);
+```
+
+而框架侧 `ProcessState::setThreadPoolMaxThreadCount()` 带一条断言：
+
+```cpp
+LOG_ALWAYS_FATAL_IF(mThreadPoolStarted && maxThreads < mMaxThreads,
+                    "Binder threadpool cannot be shrunk after starting");
+```
+
+上游这套逻辑是给 **ffmpeg 独立可执行文件**写的：那种进程里池尚未启动，设上限合法。
+但 `libffmpegkit.so` 是嵌在 App 里跑的 —— ART 在进程启动时就已经开了 binder 池，而且上限比 1 大，
+此时传 1 就构成「缩容」，断言直接 abort。**旧 8.1 AAR 的 `libffmpegkit.so` 里没有任何
+`android/binder:` 字符串（即压根没编这段），所以老版本不崩、8.1.3 崩**。
+
+修法：函数体里**删掉 `setThreadPoolMaxThreadCount` 整段**，只保留幂等的 `startThreadPool()`
+（池已启动时直接返回，不碰上限）；`fftools_ffmpeg.c` 的调用点保持不动。
+上游想解决的 Android 15+ MediaCodec 问题，在 App 场景下由系统已启动的池天然满足。
+
+⚠️ 两份文件必须**逐字一致**：
+`ffmpeg-8.1.3/compat/android/binder.c`（源）↔ `cpp/compat/android/binder.c`（JNI 侧镜像）。
+镜像文件额外多一行 `#include <android/api-level.h>`。
+
+### 为什么保留调用点而不删
+
+FFmpeg 加它是为了修 **Android 15（API 35）起的 MediaCodec 问题**。函数内部用
+`dlopen("libbinder_ndk.so")` + `dlsym` 而不是真链接，缺失时只打一条 warning，因此不引入新的
+`NEEDED` 依赖，老机型无副作用。保留调用点可以让升级时 fftools 三方合并零冲突。
+
+### 附带修正：`android/jni/Application.mk`
+
+| 项 | 原值 | 新值 | 原因 |
+|---|---|---|---|
+| `APP_PLATFORM` | `android-21` | **`android-24`** | JNI 按 API 21 编、FFmpeg 按 API 24 编，两者不一致；且 `binder.c` 的 `__ANDROID_API__ >= 24` 分支会失效 |
+| `-DFFMPEG_KIT_LTS` | 有 | **删除** | 本 fork 不是 LTS，该宏让 `AbiDetect.isNativeLTSBuild()` 错报 `true`（`ffmpegkit_abidetect.c:128`） |
+| `FFMPEG_KIT_BUILD_DATE` | `20260507` | `20261031` | 由 `ffmpegkit.c:887` 打印 |
+
+---
+
+## 版本升级时如何维护这些改动
+
+不再人工比对。用 `build_scripts/port_fftools.py` 做三方合并：
+
+```bash
+# 1) 只出报告
+python3 build_scripts/port_fftools.py \
+  --new  /mnt/d/3rd-party-projects/ffmpeg-8.1.3/fftools \
+  --base /mnt/d/3rd-party-projects/ffmpeg-8.1/fftools
+
+# 2) 确认后写盘
+python3 build_scripts/port_fftools.py --new ... --base ... --apply
+```
+
+- 三方定义：**ours = 本地 `fftools_*` 拷贝**，base = 旧版上游，theirs = 新版上游
+- 本地无改动的文件直接跟随上游；有改动的走 `git merge-file --diff3`，冲突留标记
+- 脚本同时做 flatten（加 `fftools_` 前缀）与 15 个头文件的 include 改名
+- **`compat/android/*` 不在脚本管辖范围**，需在上游结构变化时手工确认
+
+---
+
 ## Adding New Modifications
 
 When modifying FFmpeg source in this fork:
 
 1. **Document it here** — add a new numbered section with Problem/Fix/Design Decisions
 2. **Modify only the `fftools_*.c` copies** in `android/ffmpeg-kit-android-lib/src/main/cpp/`
-3. **Never modify** files under `src/ffmpeg/`
-4. **Test the build** — run `build_aar.sh` to verify compilation
+3. **Never modify** files under `src/ffmpeg/`（现在是 `../ffmpeg-8.1.3` 的软链）
+4. **Test the build** — JNI 用 `build-jni-ndk-r27d.sh`，AAR 用 `build-aar-ndk-r27d.sh`
 5. **Update this file** before committing
+

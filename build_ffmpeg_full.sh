@@ -16,7 +16,7 @@ export AR=$TOOLCHAIN/bin/llvm-ar
 export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
-export BASEDIR=/mnt/d/nili/3rd_party_projects/ffmpeg-kit
+export BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 export PREFIX=$BASEDIR/prebuilt/android-arm64/ffmpeg
 export FFMPEG_SRC=/home/pisces312/ffmpeg-8.1
 

@@ -9,7 +9,7 @@ AAR_PATH="$1"
 
 if [ -z "$AAR_PATH" ]; then
     echo "用法: $0 <aar文件路径>"
-    echo "示例: $0 /mnt/d/nili/my-git-projects/StreamClip/app/libs/ffmpeg-kit-full-gpl-arm64v8a-8.0.0.aar"
+    echo "示例: $0 /mnt/d/my-projects/StreamClip/app/libs/ffmpeg-kit-8.1.3.aar"
     exit 1
 fi
 
@@ -61,42 +61,48 @@ for abi in $ABIS; do
     fi
     
     echo "--- [$abi] ---"
-    
-    # 方法1: 直接搜索 "FFmpeg version" 字符串
-    VERSION_STR=$(strings "$SO_FILE" 2>/dev/null | grep -i "ffmpeg version" | head -1 || true)
-    if [ -n "$VERSION_STR" ]; then
-        echo "版本字符串: $VERSION_STR"
-    fi
-    
-    # 方法2: 通过 libavutil SONAME 推断
-    SONAME=$(strings "$SO_FILE" 2>/dev/null | grep "^LIBAVUTIL_[0-9]" | head -1 || true)
+
+    # libavutil 的 SONAME（符号版本节点）决定 FFmpeg 大版本，见下方对照表
+    SONAME=$(strings "$SO_FILE" 2>/dev/null | grep -E "^LIBAVUTIL_[0-9]+$" | head -1 || true)
+    FFMAJOR=""
     if [ -n "$SONAME" ]; then
         echo "libavutil SONAME: $SONAME"
-        
-        # 根据 SONAME 推断 FFmpeg 版本（近似）
         case "$SONAME" in
-            LIBAVUTIL_56) echo "推断 FFmpeg 版本: ~4.4.x" ;;
-            LIBAVUTIL_57) echo "推断 FFmpeg 版本: ~5.0.x" ;;
-            LIBAVUTIL_58) echo "推断 FFmpeg 版本: ~5.1.x / 6.0" ;;
-            LIBAVUTIL_59) echo "推断 FFmpeg 版本: ~6.0.x / 6.1" ;;
-            LIBAVUTIL_60) echo "推断 FFmpeg 版本: ~7.0.x / 7.1 / n8.0" ;;
-            LIBAVUTIL_61) echo "推断 FFmpeg 版本: ~7.1.x / n8.0+" ;;
-            *) echo "推断 FFmpeg 版本: 未知 ($SONAME)" ;;
+            LIBAVUTIL_56) FFMAJOR=4; echo "推断 FFmpeg 大版本: 4.x" ;;
+            LIBAVUTIL_57) FFMAJOR=5; echo "推断 FFmpeg 大版本: 5.x" ;;
+            LIBAVUTIL_58) FFMAJOR=6; echo "推断 FFmpeg 大版本: 6.x" ;;
+            LIBAVUTIL_59) FFMAJOR=7; echo "推断 FFmpeg 大版本: 7.x" ;;
+            LIBAVUTIL_60) FFMAJOR=8; echo "推断 FFmpeg 大版本: 8.x" ;;
+            LIBAVUTIL_61) FFMAJOR=9; echo "推断 FFmpeg 大版本: 9.x" ;;
+            *) echo "推断 FFmpeg 大版本: 未知 ($SONAME)" ;;
         esac
     fi
-    
-    # 方法3: 搜索 n7.0, n8.0 等开发分支标记
-    DEV_BRANCH=$(strings "$SO_FILE" 2>/dev/null | grep -oE "n[0-9]+\.[0-9]+" | head -1 || true)
-    if [ -n "$DEV_BRANCH" ]; then
-        echo "开发分支标记: $DEV_BRANCH"
+
+    # 精确版本：av_version_info() 内嵌的是 FFMPEG_VERSION 宏的字面量（如 "8.1" / "8.1.3"）。
+    # 注意 strings 默认最小长度是 4，"8.1" 这种 3 字符会被漏掉 → 用 -n 3。
+    # 库里同时存在大量无关版本串（7.1.4 / 9.1.4 等来自其他组件），
+    # 因此用上一步得到的大版本号过滤，并在多个候选中取**最长**的（8.1.3 优先于 8.1）。
+    if [ -n "$FFMAJOR" ]; then
+        EXACT=$(strings -n 3 "$SO_FILE" 2>/dev/null \
+                | grep -E "^${FFMAJOR}\.[0-9]+(\.[0-9]+)?$" \
+                | sort -u \
+                | awk '{ print length, $0 }' | sort -rn | head -1 | cut -d' ' -f2- || true)
+        if [ -n "$EXACT" ]; then
+            echo "FFmpeg 版本: $EXACT"
+        else
+            echo "FFmpeg 版本: 未取到字面量（大版本 ${FFMAJOR}.x）"
+        fi
+    else
+        # 兜底：只报所有形似版本的字面量，供人工判断
+        echo "候选版本串: $(strings "$SO_FILE" 2>/dev/null | grep -E "^[0-9]+\.[0-9]+(\.[0-9]+)?$" | sort -u | head -5 | tr '\n' ' ')"
     fi
-    
-    # 方法4: 搜索 git commit hash（如果有）
-    GIT_HASH=$(strings "$SO_FILE" 2>/dev/null | grep -oE "[0-9a-f]{40}" | head -1 || true)
-    if [ -n "$GIT_HASH" ]; then
-        echo "Git commit: $GIT_HASH"
-    fi
-    
+
+    # 构建配置（确认 mediacodec / 外部库是否真的编进去了）
+    CONF=$(strings "$SO_FILE" 2>/dev/null \
+           | grep -oE "enable-(mediacodec|libx264|libx265|libmp3lame|gpl|nonfree)" \
+           | sort -u | tr '\n' ' ' || true)
+    [ -n "$CONF" ] && echo "构建开关: $CONF"
+
     echo ""
 done
 

@@ -7,9 +7,14 @@ set -e
 # Set FORCE_FFMPEG=1 to rebuild only FFmpeg
 # ============================================================
 
-export BASEDIR=/mnt/d/nili/3rd_party_projects/ffmpeg-kit
+# 仓库根自动推导（不再写死 /mnt/d/nili/... 旧路径）
+export BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 export PREFIX=$BASEDIR/prebuilt/android-arm64/ffmpeg
-export FFMPEG_SRC=/home/pisces312/ffmpeg-8.1
+# FFmpeg 源码目录：可用 FFMPEG_SRC 覆盖（回退 8.1 时改这一行即可）
+export FFMPEG_SRC="${FFMPEG_SRC:-/mnt/d/3rd-party-projects/ffmpeg-8.1.3}"
+
+[ -d "$BASEDIR/src/x264" ] || { echo "ERROR: $BASEDIR 不像 ffmpeg-kit 仓库根"; exit 1; }
+[ -f "$FFMPEG_SRC/configure" ] || { echo "ERROR: 找不到 $FFMPEG_SRC/configure（FFMPEG_SRC=$FFMPEG_SRC）"; exit 1; }
 
 # Check for required internal FFmpeg headers
 # FFmpeg 'make install' does NOT install internal headers (config.h, thread.h, etc.)
@@ -147,20 +152,21 @@ if [ ! -f "$PREFIX/lib/libx265.a" ] || [ ! -f "$PREFIX/lib/pkgconfig/x265.pc" ];
     make -j$(nproc)
     make install
     # x265 4.2 make install 不生成 pkg-config 文件，手动创建
+    # 注意：heredoc 分隔符不加引号，才能展开 $PREFIX（历史版本写死了旧路径）
     if [ ! -f "$PREFIX/lib/pkgconfig/x265.pc" ]; then
         echo ">>> Creating x265.pc manually..."
-        cat > "$PREFIX/lib/pkgconfig/x265.pc" << "EOF"
-prefix=/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include
+        cat > "$PREFIX/lib/pkgconfig/x265.pc" << EOF
+prefix=$PREFIX
+exec_prefix=\${prefix}
+libdir=\${exec_prefix}/lib
+includedir=\${prefix}/include
 
 Name: x265
 Description: H.265/HEVC video encoder
 Version: 4.2
-Libs: -L${libdir} -lx265
+Libs: -L\${libdir} -lx265
 Libs.private: -lm -lc++
-Cflags: -I${includedir}
+Cflags: -I\${includedir}
 EOF
     fi
     echo ">>> x265 done"
@@ -169,24 +175,20 @@ else
 fi
 
 # ------ lame (skip if already built) ------
-if [ ! -f "$PREFIX/lib/libmp3lame.a" ] || [ ! -f "$PREFIX/lib/pkgconfig/mp3lame.pc" ]; then
+# 注意：判据只看 libmp3lame.a。历史上这里还判了 mp3lame.pc，但该文件从未被生成
+# （lame 的 configure 不装 pc 文件），导致条件恒真 —— 每次构建都重编 lame。
+if [ ! -f "$PREFIX/lib/libmp3lame.a" ]; then
     echo -e "\n>>> Building lame..."
     cd $BASEDIR/src/lame
+    [ -f "./configure" ] || { echo "ERROR: $BASEDIR/src/lame 缺少 configure，请先把 lame 源码放进来"; exit 1; }
     make distclean 2>/dev/null || true
-    if [ ! -f "./configure" ]; then
-        echo ">>> Extracting lame-3.100.tar.gz..."
-        cd $BASEDIR/src
-        rm -rf lame
-        tar xzf /home/pisces312/lame-3.100.tar.gz
-        mv lame-3.100 lame
-        cd lame
-    fi
     ./configure \
         --prefix=$PREFIX \
         --host=aarch64-linux-android \
         --disable-shared \
         --enable-static \
         --disable-frontend \
+        --disable-decoder \
         CC="$CC" \
         CXX="$CXX" \
         AR="$AR" \

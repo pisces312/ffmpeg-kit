@@ -44,29 +44,40 @@ Output: `android/ffmpeg-kit-android-lib/build/outputs/aar/ffmpeg-kit-release.aar
 
 ## Prerequisites
 
-- WSL with Android NDK r25b at `/home/pisces312/android-ndk-r25b`
+- WSL2 Ubuntu 24.04 + Android NDK r27d at `/home/pisces312/android-ndk-r27d`
 - Windows Gradle (called via `cmd.exe /c "gradlew.bat"`)
 - Source code in `src/ffmpeg`, `src/x264`, `src/x265`, `src/lame`
+
+完整环境清单见 [AGENTS.md](AGENTS.md) §3。
 
 ## Documentation
 
 | Document | Description |
 |----------|-------------|
-| [docs/build-plan.md](docs/build-plan.md) | FFmpeg 6.0→8.1 migration plan |
-| [docs/build-log.md](docs/build-log.md) | Build environment, scripts, and results |
+| [AGENTS.md](AGENTS.md) | **开发环境与协作约定**：环境版本、路径映射、构建命令、硬性约束 |
+| [docs/ffmpeg-build.md](docs/ffmpeg-build.md) | **构建总纲（唯一事实来源）**：环境、全部 configure 参数、外部库版本、编码器取舍、踩坑登记 |
+| [docs/ffmpeg-8.1.3-rebuild-plan.md](docs/ffmpeg-8.1.3-rebuild-plan.md) | 8.1.3 重建施工方案（含外部库升级决策 D1–D5） |
 | [docs/ffmpeg-modifications.md](docs/ffmpeg-modifications.md) | All changes to FFmpeg source in this fork |
 
 ## Project Structure
 
 ```
 ffmpeg-kit/
-  build_ffmpeg_full.sh    # Build FFmpeg + dependencies
-  build_aar.sh            # Package AAR
-  android/                # Android library project
-    jni/                  # JNI source (C bridge)
-    libs/arm64-v8a/       # FFmpeg .so files (copied by build_aar.sh)
-    ffmpeg-kit-android-lib/ # Java wrapper library
-  prebuilt/               # Built FFmpeg libraries
-  src/                    # Source code (ffmpeg, x264, x265, lame)
-  docs/                   # Project documentation
+  build-ffmpeg-ndk-27d.sh      # 轨道 A ①：x264/x265/lame + FFmpeg 共享库
+  build-jni-ndk-r27d.sh        # 轨道 A ②：ndk-build JNI + 拷贝 .so
+  build-aar-ndk-r27d.sh        # 轨道 A ③：Gradle 打包 + strip
+  build-cli-binary-ndk-r27d.sh # 轨道 B：CLI 静态二进制（full / minimal）
+  build-cpu-features-ndk-27d.sh# libndk_compat.a
+  check-aar-ffmpeg-version.sh  # AAR 版本 / SONAME 校验
+  build_scripts/               # port_fftools.py / copy_textformat.py / fix_includes.py
+  android/                     # Android library project
+    jni/                       # JNI build config (Android.mk / Application.mk)
+    libs/arm64-v8a/            # FFmpeg .so files (copied by build-jni-*.sh)
+    ffmpeg-kit-android-lib/    # Java wrapper + cpp/ 移植层
+  prebuilt/android-arm64/      # Built FFmpeg libraries + pkgconfig
+  out/cli/                     # 轨道 B 产出
+  src/                         # Source code (ffmpeg, x264, x265, lame, cpu-features)
+  docs/                        # Project documentation
 ```
+
+> `build_ffmpeg_full.sh` / `build_aar.sh` 为**旧脚本，已弃用**，仅留作参考。

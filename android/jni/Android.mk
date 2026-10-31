@@ -60,7 +60,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 $(call import-module, cpu-features)
 
-MY_SRC_FILES := ffmpegkit.c ffprobekit.c ffmpegkit_exception.c fftools_cmdutils.c fftools_ffmpeg.c fftools_ffprobe.c fftools_ffmpeg_mux.c fftools_ffmpeg_mux_init.c fftools_ffmpeg_demux.c fftools_ffmpeg_opt.c fftools_opt_common.c fftools_ffmpeg_hw.c fftools_ffmpeg_filter.c fftools_ffmpeg_dec.c fftools_ffmpeg_enc.c fftools_ffmpeg_sched.c fftools_sync_queue.c fftools_thread_queue.c fftools_textformat.c fftools_tf_compact.c fftools_tf_default.c fftools_tf_flat.c fftools_tf_ini.c fftools_tf_json.c fftools_tf_mermaid.c fftools_tf_xml.c fftools_tw_avio.c fftools_tw_buffer.c fftools_tw_stdout.c fftools_graphprint.c fftools_resman.c fftools_graph_css.c fftools_graph_html.c
+MY_SRC_FILES := ffmpegkit.c ffprobekit.c ffmpegkit_exception.c fftools_cmdutils.c fftools_ffmpeg.c fftools_ffprobe.c fftools_ffmpeg_mux.c fftools_ffmpeg_mux_init.c fftools_ffmpeg_demux.c fftools_ffmpeg_opt.c fftools_opt_common.c fftools_ffmpeg_hw.c fftools_ffmpeg_filter.c fftools_ffmpeg_dec.c fftools_ffmpeg_enc.c fftools_ffmpeg_sched.c fftools_sync_queue.c fftools_thread_queue.c fftools_textformat.c fftools_tf_compact.c fftools_tf_default.c fftools_tf_flat.c fftools_tf_ini.c fftools_tf_json.c fftools_tf_mermaid.c fftools_tf_xml.c fftools_tw_avio.c fftools_tw_buffer.c fftools_tw_stdout.c fftools_graphprint.c fftools_resman.c fftools_graph_css.c fftools_graph_html.c compat/android/binder.c
 
 MY_CFLAGS := -Wall -Werror -Wno-unused-parameter -Wno-switch -Wno-sign-compare -Wno-parentheses -Wno-unused-const-variable
 MY_LDLIBS := -llog -lz -landroid

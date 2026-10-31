@@ -1,0 +1,10 @@
+prefix=/mnt/d/3rd-party-projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: lame
+Description: high quality MPEG Audio Layer III (MP3) encoder library
+Version: 4.0
+Libs: -L${libdir} -lmp3lame
+Cflags: -I${includedir}/lame

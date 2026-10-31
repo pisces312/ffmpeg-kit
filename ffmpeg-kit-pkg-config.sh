@@ -1,6 +1,6 @@
 #!/bin/bash
 # Simple pkg-config wrapper for FFmpeg build
-PKG_CONFIG_PATH="/mnt/d/nili/3rd_party_projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib/pkgconfig"
+PKG_CONFIG_PATH="/mnt/d/3rd-party-projects/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib/pkgconfig"
 
 # Find the real pkg-config or use a simple implementation
 if command -v pkg-config &>/dev/null; then

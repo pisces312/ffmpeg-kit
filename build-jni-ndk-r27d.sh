@@ -13,7 +13,7 @@ if [ "$1" == "--debug" ]; then
 fi
 
 export NDK=/home/pisces312/android-ndk-r27d
-export BASEDIR=/mnt/d/nili/3rd_party_projects/ffmpeg-kit
+export BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 
 # 根据模式选择 Application.mk 配置
 APP_MK="$BASEDIR/android/jni/Application.mk"
